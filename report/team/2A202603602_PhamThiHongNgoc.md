@@ -4,7 +4,7 @@
 
 - Họ tên: Phạm Thị Hồng Ngọc
 - MSSV: 2A202603602
-- Email: (bổ sung email cá nhân trước khi nộp)
+- Email: ngockarryruby@gmail.com
 - Vai trong nhóm: Người viết code (phần D — Pilot)
 
 ## 2. Phần việc phụ trách
