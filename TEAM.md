@@ -5,7 +5,7 @@
 - Tên nhóm: PhucLocTho
 - Lớp: L3A
 - Repo nhóm: `K5-L3A-DAY13-PhucLocTho-LaunchEconomics` (xem [SUBMISSION.md](SUBMISSION.md))
-- URL repo, nhánh nộp, commit chốt: https://github.com/trannguyentran1997/K5-L3A-DAY13-PhucLocTho-LaunchEconomics · nhánh `main` · commit chốt: `a878e07` (bản làm tại lớp; nếu sau Gate 2a có commit nội dung mới thì ghi lại mã mới)
+- URL repo, nhánh nộp, commit chốt: https://github.com/trannguyentran1997/K5-L3A-DAY13-PhucLocTho-LaunchEconomics · nhánh `main` · commit chốt: `482b367` (bản làm tại lớp; nếu sau Gate 2a có commit nội dung mới thì ghi lại mã mới)
 
 ## Thành viên
 
@@ -64,7 +64,7 @@ Báo cáo của nhóm: `report/team/2A202603603_NguyenTranTuTran.md`, `report/te
 - `TEAM.md`, `group_report.md` (có bảng đối chiếu phân công), báo cáo cá nhân.
 - Soát cuối: không có từ bị cấm, mọi số giả lập có nhãn `simulated`, `pilot_plan.yaml` đọc được và không còn dấu `?`.
 - Chấm C6 và tổng hợp phiếu chấm nhóm TENGICUNGDUOC (thay phần của Đăng) vào `report/team/phieu_cham_TENGICUNGDUOC.md`: 25/30 (C6 10, C7 5, C8 10), quyết định Go có điều kiện, một câu hỏi về luật dừng chi phí; trả `phieu_cham.md` về nội dung mẫu ban đầu.
-- Ghi commit chốt `a878e07` vào `TEAM.md` và push lên `main`.
+- Ghi commit chốt `482b367` vào `TEAM.md` và push lên `main`.
 - Chưa xong: gửi hồ sơ và trình bày 1 phút ở Gate 2a; ghi câu trả lời của đội trình và kết quả nhóm mình nhận được.
 
 ### Bằng chứng
