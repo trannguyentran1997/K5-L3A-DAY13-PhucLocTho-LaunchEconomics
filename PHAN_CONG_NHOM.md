@@ -53,11 +53,11 @@ Ngoài ra, cả nhóm cùng làm ba việc chung: duyệt chéo Gate 2a (17:00),
 
 ### Ngọc · Phần pilot (D)
 
-- [ ] Viết code D1 trong file nháp riêng `src/nhap_pilot.py` (đọc CSV như `lab13.py`, có `keep_default_na=False`) để không đụng file của Đức: 5 câu a–e (theo yêu cầu, nhân viên m = 75, 20 nhân viên mỗi nhóm, 6 depot mỗi nhóm, mức chênh 6 điểm); tỉ lệ `mo_lai_trong_7_ngay` hiện tại (toàn mẫu và phạm vi `noi_dia` + `hang_nang`); power khi n = 859 mà tác động thật chỉ 5 điểm.
-- [ ] `pilot_plan.yaml`: chú thích D1, D2 (5 câu "tách được tác động"), đánh đổi đã chấp nhận, mọi trường, ≥ 3 luật dừng (an toàn, chi phí, mức độ sử dụng) đủ 4 vế NẾU – TRONG – THÌ – KHÔNG THÌ. Ngưỡng an toàn không đặt thấp hơn tỉ lệ mở lại đang có.
+- [x] Viết code D1 trong file nháp riêng `src/nhap_pilot.py` (đọc CSV như `lab13.py`, có `keep_default_na=False`) để không đụng file của Đức: 5 câu a–e (theo yêu cầu, nhân viên m = 75, 20 nhân viên mỗi nhóm, 6 depot mỗi nhóm, mức chênh 6 điểm); tỉ lệ `mo_lai_trong_7_ngay` hiện tại (toàn mẫu và phạm vi `noi_dia` + `hang_nang`); power khi n = 859 mà tác động thật chỉ 5 điểm.
+- [x] `pilot_plan.yaml`: chú thích D1, D2 (5 câu "tách được tác động"), đánh đổi đã chấp nhận, mọi trường, ≥ 3 luật dừng (an toàn, chi phí, mức độ sử dụng) đủ 4 vế NẾU – TRONG – THÌ – KHÔNG THÌ. Ngưỡng an toàn không đặt thấp hơn tỉ lệ mở lại đang có.
 - [ ] Làm cuối: dòng `scope`, lấy tỉ lệ A3 từ `bang_chi_phi.md` trên GitHub.
 - [ ] Sau khi Đức báo xong mốc 2: `git pull`, dán phần D từ file nháp vào `src/lab13.py` (hàm đặt trên dòng `if __name__`, lời gọi đặt ở cuối khối main thay dòng `TODO CP4`), chạy `python lab13.py` hết không lỗi, **xoá `src/nhap_pilot.py`**, push.
-- [ ] Chạy 2 lệnh tự kiểm trong `src/`:
+- [x] Chạy 2 lệnh tự kiểm trong `src/`:
   ```bash
   python -c "import yaml; yaml.safe_load(open('../report/team/pilot_plan.yaml'))"
   grep -v '^ *#' ../report/team/pilot_plan.yaml | grep -n '?'    # không được in gì
