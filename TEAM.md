@@ -63,7 +63,7 @@ Báo cáo của nhóm: `report/team/2A202603603_NguyenTranTuTran.md`, `report/te
 - Hồ sơ launch v0: 7 mục, mỗi mục có con số chính, trạng thái, một vai trò phụ trách; đề xuất Go có điều kiện cho pilot `noi_dia` + `hang_nang` với 4 điều kiện có người phụ trách và ngày kiểm tra; nêu 2 con số bất lợi (xem lại 100% là 0,98–1,03×; power 0,64 ở mức +5 điểm).
 - `TEAM.md`, `group_report.md` (có bảng đối chiếu phân công), báo cáo cá nhân.
 - Soát cuối: không có từ bị cấm, mọi số giả lập có nhãn `simulated`, `pilot_plan.yaml` đọc được và không còn dấu `?`.
-- Chấm C6 và tổng hợp phiếu chấm nhóm TENGICUNGDUOC (thay phần của Đăng) vào `report/team/phieu_cham_TENGICUNGDUOC.md`: 25/30 (C6 10, C7 5, C8 10), quyết định Go có điều kiện, một câu hỏi về luật dừng chi phí; trả `phieu_cham.md` về nội dung mẫu ban đầu.
+- Chấm C6 và tổng hợp phiếu chấm nhóm TENGICUNGDUOC (thay phần của Đăng) vào `report/team/phieu_cham.md`: 25/30 (C6 10, C7 5, C8 10), quyết định Go có điều kiện, một câu hỏi về luật dừng chi phí.
 - Ghi commit chốt `482b367` vào `TEAM.md` và push lên `main`.
 - Chưa xong: gửi hồ sơ và trình bày 1 phút ở Gate 2a; ghi câu trả lời của đội trình và kết quả nhóm mình nhận được.
 
@@ -143,7 +143,7 @@ Báo cáo của nhóm: `report/team/2A202603603_NguyenTranTuTran.md`, `report/te
 - Danh sách 11 event có `trace_id` và kiểm tra chéo chỉ số nào tính từ event nào (review thêm 1 event cho bảng khắc phục mới, thành 12).
 - E2: 4 dòng rủi ro kinh tế lấy số từ bảng độ nhạy (làm lại gấp đôi, xem lại 100%, khối lượng thấp, lương tăng) [simulated].
 - Báo cáo cá nhân (review sửa các câu về đồng thuận).
-- Phiếu chấm nhóm TENGICUNGDUOC (`report/team/phieu_cham_TENGICUNGDUOC.md`): phần tổng hợp của Đăng do Trân làm thay; tổng 25/30, câu trả lời của đội trình ghi sau phần hỏi đáp.
+- Phiếu chấm nhóm TENGICUNGDUOC (`report/team/phieu_cham.md`): phần tổng hợp của Đăng do Trân làm thay; tổng 25/30, câu trả lời của đội trình ghi sau phần hỏi đáp.
 
 ### Bằng chứng
 

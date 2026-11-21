@@ -30,7 +30,7 @@ Nhóm chia việc theo phần riêng để không ai phải chờ ai: Đức là
 - Chỉ số trong đợt chạy thử: chính 82,83%, bỏ qua gợi ý 27,12%, mở lại 7 ngày 4,25%.
 - Pilot: 20 + 20 nhân viên, n = 859/nhóm, m ≥ 299; power chỉ 0,64 nếu tác động thật là +5 điểm.
 - **Đề xuất: Go có điều kiện** cho pilot `noi_dia` + `hang_nang`, với 4 điều kiện có người phụ trách và ngày kiểm tra (xem hồ sơ).
-- Nhóm mình chấm nhóm TENGICUNGDUOC: 25/30 (C6 10, C7 5 vì dòng `scope` thiếu nhãn simulated cho 2 số, C8 10), quyết định Go có điều kiện, 1 câu hỏi về luật dừng chi phí ([phieu_cham_TENGICUNGDUOC.md](phieu_cham_TENGICUNGDUOC.md)).
+- Nhóm mình chấm nhóm TENGICUNGDUOC: 25/30 (C6 10, C7 5 vì dòng `scope` thiếu nhãn simulated cho 2 số, C8 10), quyết định Go có điều kiện, 1 câu hỏi về luật dừng chi phí ([phieu_cham.md](phieu_cham.md)).
 - Kết quả duyệt chéo Gate 2a nhóm nhận được: chờ phiếu của nhóm hội đồng.
 
 ## 5. Khó khăn và cách xử lý
