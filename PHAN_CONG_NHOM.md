@@ -166,13 +166,102 @@ Ca  | Mã | Phân vân
 4. Ca lệch: Đăng nhắn Trân trao đổi nhanh, chốt "Nhãn thống nhất" và ghi **một câu quy tắc phân biệt** cho mỗi ca lệch.
 5. **Không sửa hai cột nhãn độc lập sau khi đã so** (quy định trong `RULES.md`); chỉ cột "Nhãn thống nhất" được đổi.
 
-## 5. Trước Gate 2a: 10 phút đọc phần của nhau
+## 5. Gate 2a: chuẩn bị, chấm nhóm bạn và trình bày
+
+Nhóm số n chấm nhóm n + 1, nhóm cuối chấm nhóm 1. Hội đồng chấm **theo bằng chứng trong hồ sơ**, không theo cách trình bày: một đề xuất No-go có lý do bằng số được điểm cao hơn một đề xuất Go bỏ qua con số bất lợi. Thang chấm 30 điểm: C6 đề xuất khớp bằng chứng, C7 số giả lập và phạm vi, C8 pilot ra được quyết định (mỗi tiêu chí 0 / 5 / 10).
+
+| Giờ | Việc |
+| --- | --- |
+| 16:50 | 10 phút đọc phần của nhau (mục 5.1) |
+| 17:00 (10 phút) | Trân gửi `ho_so_launch_v0.md` cho nhóm hội đồng; nhận hồ sơ của nhóm n + 1 |
+| 17:10 (15 phút) | Đọc hồ sơ nhóm n + 1, chấm, viết quyết định kèm lý do và một câu hỏi (mục 5.2) |
+| 17:25 (15 phút) | Mỗi cặp: đội trình 1 phút, hội đồng công bố 1 phút, đội trả lời 1 phút (mục 5.3) |
+| 17:40 (5 phút) | Giảng viên chốt quyết định nào khớp bằng chứng; ghi kết quả nhóm mình nhận được vào mục 4 của `group_report.md` |
+
+### 5.1 Trước Gate 2a: 10 phút đọc phần của nhau
 
 Hội đồng và giảng viên có thể hỏi **bất kỳ ai** trong nhóm. Lúc 16:50, mỗi người đọc lướt ba phần còn lại để tự trả lời được:
 
 1. Vì sao tử số tính mọi lần chạy còn mẫu số chỉ đếm việc thành công (phần Đức).
 2. Cỡ mẫu hiệu dụng khi chia theo cụm, vì sao số cụm quyết định chứ không phải tổng số yêu cầu (phần Ngọc).
 3. Lý do của đề xuất cuối, kể cả con số bất lợi (phần Trân).
+
+### 5.2 Chấm nhóm bạn (nhóm n + 1)
+
+**Chia việc trong 15 phút:**
+
+| Người | Đọc file nào của nhóm bạn | Chấm tiêu chí |
+| --- | --- | --- |
+| Trân | `ho_so_launch_v0.md`: đề xuất và các điều kiện | C6 |
+| Đức | `bang_chi_phi.md`, các mục 1, 2, 3, 7 của hồ sơ | C7 |
+| Ngọc | `pilot_plan.yaml` | C8 |
+| Đăng | Ghi `phieu_cham.md`, chốt điểm cùng cả nhóm | Cả 3 |
+
+**Kiểm cụ thể từng tiêu chí:**
+
+- **C6 · Đề xuất khớp bằng chứng.**
+  - Đề xuất có đúng một trong ba (Go · Go có điều kiện · No-go) không? Có mâu thuẫn với số của chính họ không (ví dụ Go cho "mọi yêu cầu" trong khi `quoc_te` là 1,88×)? Mâu thuẫn thì 0 điểm.
+  - Có nêu con số bất lợi kèm cách xử lý không, nhất là xem lại 100% = 0,98–1,03× và power 0,64 nếu chấp nhận mức chênh 6 điểm? Khớp nhưng bỏ qua số bất lợi thì 5 điểm; nêu cả số bất lợi và cách xử lý thì 10 điểm.
+  - Go có điều kiện: mỗi điều kiện phải có người phụ trách và ngày kiểm tra.
+- **C7 · Số giả lập và phạm vi.**
+  - Mọi số tính từ phút xem lại / làm lại (chi phí, độ nhạy, B4, rủi ro E2) phải có nhãn `simulated`; thiếu dù một chỗ thì không được 10 điểm.
+  - Phạm vi có thu hẹp kèm lý do bằng số không (ví dụ loại `quoc_te` vì 1,88× và thành công 27,3%)? Không nhãn và phạm vi "mọi yêu cầu" thì 0 điểm.
+- **C8 · Pilot ra được quyết định.**
+  - Có nhóm đối chứng không? Chia theo depot 6 + 6 thì cỡ mẫu hiệu dụng tối đa 300 và chỉ 6 cụm; chia theo yêu cầu thì đủ mẫu nhưng không tách được tác động.
+  - Có ít nhất 20 cụm mỗi nhóm, có cỡ mẫu và hệ số thiết kế bằng số không?
+  - Luật dừng có ngưỡng, thời hạn và người có quyền dừng không? Ngưỡng an toàn tuyệt đối 3% trong khi tỉ lệ mở lại hiện tại 4,25% thì pilot dừng ngay tuần đầu.
+
+**Số đáp án để đối chiếu nhanh** (lệch không quá 2% là đúng):
+
+| Chỉ số | Giá trị |
+| --- | --- |
+| Chi phí mỗi việc thành công | 4.472 đ, gấp 16,3 lần hoá đơn chia số yêu cầu |
+| Cả hệ thống so với nhân viên tự làm | 0,49× |
+| Theo loại yêu cầu | `noi_dia` 0,22× · `hang_nang` 0,69× · `doi_tac` 0,85× · `quoc_te` 1,88× |
+| Ba yếu tố nhạy nhất | làm lại +51,8% · xem lại +40,7% · lương +23,1% |
+| Xem lại 100% (B4) | 11.743 đ = 0,98× · 12.415 đ = 1,03× |
+| D1 | 1.251 · 3.103 · 1.000 · 300 · m ≥ 299 · power 0,64 |
+| Ba chỉ số E1 | 82,83% · 27,12% · 4,25% |
+
+**Ghi vào `phieu_cham.md`:**
+
+- Phần đầu: nhóm chấm (PhucLocTho, số nhóm) và nhóm được chấm.
+- Mỗi tiêu chí: điểm và **lý do có số**.
+- Quyết định của hội đồng (Go · Go có điều kiện · No-go) kèm lý do.
+- Một câu hỏi cho đội trình, ví dụ:
+  - "Tuần đầu phải xem lại 100% thì chi phí mỗi việc thành công là bao nhiêu?"
+  - "Cách chia của nhóm có ít nhất 20 cụm mỗi nhóm không?"
+  - "Với tỉ lệ mở lại 4,25% hiện tại, ngưỡng an toàn của nhóm có làm pilot dừng ngay tuần đầu không?"
+- Câu trả lời của đội trình: ghi ngay tại buổi.
+
+### 5.3 Nhóm mình trình bày (Trân, 1 phút)
+
+Kịch bản, mỗi đoạn ứng với một tiêu chí để hội đồng dễ cho 10 điểm:
+
+> "Nhóm PhucLocTho đề xuất **Go có điều kiện**, chỉ cho `noi_dia` và `hang_nang`. Chi phí mỗi việc thành công là 4.472 đồng, gấp 16,3 lần hoá đơn token, vì 92,5% là giờ nhân viên. Mọi số chi phí đều là simulated. Nhóm loại `quoc_te` vì đắt gấp 1,88 lần nhân viên và chỉ 27% thành công, chạy lại cũng không cứu được. *(C7)*
+>
+> Có hai con số bất lợi. Một: nếu tuần đầu xem lại 100% thì chi phí là 0,98 đến 1,03 lần nhân viên, tức không tiết kiệm, nên điều kiện 4 là giảm xem lại xuống dưới 50% và mỗi lần không quá 5 phút. Hai: 40 nhân viên không đủ để thấy mức chênh 5 điểm, nhóm chấp nhận mức 6 điểm, power còn 0,64 ở mức 5 điểm, và Giám đốc vận hành phải ký chấp nhận. *(C6)*
+>
+> Pilot chia theo nhân viên 20 + 20, bốc thăm ngẫu nhiên, 20 cụm mỗi nhóm, mỗi người khoảng 299 yêu cầu. Có 4 luật dừng, luật nào cũng có ngưỡng, thời hạn và người tắt. Ngày quyết định là 5/1/2027. *(C8)*"
+
+**Câu hỏi dễ gặp và câu trả lời** (ai trong nhóm cũng phải trả lời được):
+
+| Câu hỏi | Trả lời |
+| --- | --- |
+| Xem lại 100% thì sao? | 11.743 đ = 0,98× (12.415 đ = 1,03× nếu làm lại 15,3 phút); hoà vốn khi mỗi lần xem lại ≤ 5,1 phút; điều kiện 4 giảm xem lại theo bậc |
+| Đủ 20 cụm không? | Đúng 20 nhân viên mỗi nhóm; trần 1.000 < 1.251 nên chọn mức chênh 6 điểm, đã nêu power 0,64 |
+| Ngưỡng an toàn có làm dừng ngay tuần đầu không? | Không đặt 3%; so với đối chứng +2 điểm, cộng trần tuyệt đối 6%; hiện tại trong phạm vi là 3,97% |
+| Vì sao tử số tính mọi lần chạy? | Lần chạy lỗi vẫn tốn tiền; mẫu số chỉ đếm 978 việc làm xong |
+| Hai bộ nhãn trùng 20/20? | Gắn độc lập trên phiếu riêng, có ảnh chụp; Trân giải thích 1–2 ca từng phân vân, ví dụ ca 18 là Ngữ cảnh vì số tiền tính đúng chính sách |
+
+### 5.4 Hai điểm yếu của luật dừng cần sửa hoặc chủ động nêu
+
+Rút ra từ `slide-d1-ba-cach-chia.html`. Hội đồng hỏi vào đây thì C8 dễ chỉ còn 5 điểm:
+
+1. **Luật dừng 1** bắt lệch ≥ 2 điểm so với đối chứng ở mọi bước, kể cả khi mới mở cho 4 người. Với 4 người, lệch 2 điểm rất dễ xảy ra do ngẫu nhiên (slide ước tính 56/1.000 lần dù trợ lý không gây thêm lỗi; 10 người còn 8/1.000). Cách sửa: mở lại vượt 6%, hoàn trùng, hoặc báo "đã hoàn" mà sổ cái không ghi thì tắt ngay ở mọi bước; điều kiện "lệch ≥ 2 điểm so với đối chứng" chỉ áp dụng từ bước 10 người.
+2. **Luật dừng 2** (chi phí > 8.000 đ) chưa ghi rõ có tính tiền thuê 40 triệu/tháng không. Nếu tính, ở bước 4 người chi phí khoảng 15.300 đ mỗi việc nên luật kêu ngay dù tiền máy và giờ người không đổi (10 người khoảng 8.200 đ, 20 người khoảng 5.800 đ). Cách sửa: ghi rõ 8.000 đ chỉ tính token, tool và giờ người; tiền thuê theo dõi riêng ở rủi ro E2 ("ít đơn thì xem lại hợp đồng, không kết luận trợ lý đắt").
+
+Nếu chưa kịp sửa `pilot_plan.yaml` trước 17:00, Trân nêu luôn hai điểm này kèm cách sửa khi trình bày: tự nêu điểm yếu kèm cách xử lý vẫn được tính ở C6.
 
 ## 6. Quy ước làm chung
 
