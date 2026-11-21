@@ -63,7 +63,7 @@ Chi tiết đóng góp của từng thành viên nằm trong `TEAM.md`. Bảng d
 | Đăng | Nhập 2 bộ nhãn, tỉ lệ đồng thuận, quy tắc ca lệch | 🔧 | Đã nhập đủ 2 bộ nhãn vào `bang_loi.md` (đồng thuận 20/20 = 100%); cột người 2 bản đầu điền khi Trân chưa gắn đã gỡ khi review và điền lại sau khi có bộ nhãn của Trân |
 | Đăng | Bảng khắc phục 5 ca đủ 5 loại | 🔧 | Bản đầu trùng gần nguyên văn bài mẫu; viết lại bằng ca 14, 20, 16, 19, 5 |
 | Đăng | `chi_so.md`: 3 chỉ số, 2 chỉ số tự đề xuất, ≥ 6 event, E2 ≥ 2 dòng | 🔧 | 82,83% · 27,12% · 4,25%; 12 event; 4 dòng rủi ro; review thêm event cho 5 ca mới |
-| Đăng | `phieu_cham.md` | ⏳ | Điền tại buổi Gate 2a |
+| Đăng → Trân | `phieu_cham.md` | 🔧 | Trân soạn nháp chấm nhóm TENGICUNGDUOC (đề xuất 30/30, Go có điều kiện, 1 câu hỏi); cả nhóm chốt và ghi câu trả lời tại buổi |
 | Đăng | Báo cáo cá nhân | 🔧 | `2A202603618_TranTuanDang.md`; review sửa các câu "đồng thuận 18/20" và cập nhật đồng thuận 20/20 sau khi có bộ nhãn của Trân |
 | Trân | Mời collaborator | ✅ | 3 thành viên đã push được nhánh lên repo nhóm |
 | Trân | Gắn nhãn 20 ca (người gắn nhãn 2) | ✅ | Hoàn thành 20/20 ca theo quy tắc 5 bước Google PAIR, đồng thuận 20/20 = 100% với Đăng |
