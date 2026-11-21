@@ -22,6 +22,7 @@
   - `pilot_plan.yaml`: đổi 12.414 đ thành 12.415 đ cho khớp số code của nhóm; tách "hoàn tiền trùng" thành luật dừng riêng (1 ca trong 24 giờ là dừng, thay vì chờ 3 ngày liên tiếp); ghi ngày bắt đầu 2026-12-01 cho khớp ngày quyết định.
   - `bang_loi.md`: bảng khắc phục bản đầu trùng gần nguyên văn bài làm mẫu, đã viết lại bằng 5 ca khác (14, 20, 16, 19, 5); gỡ cột nhãn người 2 vì cột này được điền khi tôi chưa gắn nhãn.
   - `chi_so.md`: thêm event và thuộc tính mà 5 ca mới cần, sửa dòng kiểm tra chéo.
+- **Kiểm số A2 bằng Excel:** `report/team/kiem_so_A2.xlsx` tính lại token, tool, xem lại, làm lại, số việc thành công và chi phí mỗi việc thành công bằng công thức Excel trên hai file CSV, không dùng `lab13.py`; khớp số của Đức, lệch lớn nhất 0,11% do làm tròn.
 - **Hồ sơ:** viết `ho_so_launch_v0.md` (7 mục, mỗi mục có con số chính, trạng thái, vai trò phụ trách; đề xuất Go có điều kiện với 4 điều kiện có ngày kiểm tra), `TEAM.md`, `group_report.md`.
 - **Chưa xong:** bộ nhãn độc lập 20 ca của tôi cho nhiệm vụ C.
 
@@ -35,7 +36,7 @@
 ## 5. Công cụ AI đã dùng
 
 - **Công cụ:** Claude Code (Claude Opus) trong VS Code.
-- **Dùng vào việc gì:** đọc đề và viết file phân công; gộp nhánh và giải xung đột; review các file hồ sơ, phát hiện bảng khắc phục trùng bài mẫu và cột nhãn chưa có thật; soạn lại bảng khắc phục, luật dừng hoàn trùng, hồ sơ launch v0, `TEAM.md`, `group_report.md` và bản nháp báo cáo này.
+- **Dùng vào việc gì:** đọc đề và viết file phân công; gộp nhánh và giải xung đột; review các file hồ sơ, phát hiện bảng khắc phục trùng bài mẫu và cột nhãn chưa có thật; dựng workbook kiểm số A2 bằng Excel, soạn lại bảng khắc phục, luật dừng hoàn trùng, hồ sơ launch v0, `TEAM.md`, `group_report.md` và bản nháp báo cáo này.
 - **Không dùng AI để gắn nhãn 20 ca:** khi được nhờ, Claude Code từ chối gắn nhãn thay vì quy định của lab; tôi tự gắn bằng phiếu trong `PHAN_CONG_NHOM.md` (chưa xong lúc viết báo cáo này).
 - **Cách tự kiểm tra:**
   - Chạy `python lab13.py` trong `src/` trên máy mình (máy khác với máy viết code), đối chiếu từng số với `docs/Lab13_Huong_dan_chi_tiet_buoi_chieu.md`.

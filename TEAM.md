@@ -47,6 +47,7 @@ Báo cáo riêng của từng thành viên nằm trong `report/team/`:
 - Viết `PHAN_CONG_NHOM.md`: chia 4 phần riêng (A + B, D, C + E, tổng hợp) để không ai phải chờ ai, kèm cách gắn nhãn và checklist nộp bài.
 - Gộp 3 nhánh vào `main`, giải xung đột `src/lab13.py`, chạy lại toàn bộ và đối chiếu số với đáp án.
 - Review từng phần, sửa: số 12.415 đ trong `pilot_plan.yaml`; tách luật dừng hoàn trùng; viết lại bảng khắc phục cho khác bài mẫu; gỡ cột nhãn người 2 chưa có thật.
+- Kiểm số A2 độc lập bằng Excel (`report/team/kiem_so_A2.xlsx`), khớp `lab13.py`, lệch lớn nhất 0,11%.
 - Viết hồ sơ launch v0 (7 mục, đề xuất Go có điều kiện), `TEAM.md`, `group_report.md`.
 - Bộ nhãn độc lập 20 ca: chưa xong.
 

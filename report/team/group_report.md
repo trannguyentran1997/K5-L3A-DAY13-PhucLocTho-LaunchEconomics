@@ -53,7 +53,7 @@ Chi tiết đóng góp của từng thành viên nằm trong `TEAM.md`. Bảng d
 | Đức | B1–B4 và `bang_chi_phi.md` đủ, không còn `...` | ✅ | B1 đủ 9 dòng, xếp hạng, B3, B4 khớp đáp án |
 | Đức | Push mốc 1 (~14:50) và mốc 2 (~15:20); sau mốc 2 không sửa `lab13.py` | ⏳ trễ | Push một lần lúc 15:38 (`80048f4`); sửa tiếp `lab13.py` lúc 15:49 sau khi Ngọc đã ghép phần D (15:44), gây xung đột khi gộp |
 | Đức | Báo cáo cá nhân | ✅ | `2A202603611_PhamDuyDuc.md` (`a631b86`) |
-| Ngọc | Kiểm số A2 bằng Excel | ⏳ | Việc thêm sau khi Ngọc đã làm xong; số A2 của Đức đã khớp đáp án nên nhóm bỏ qua |
+| Ngọc → Trân | Kiểm số A2 bằng Excel | ✅ | Ngọc chưa làm (việc thêm sau); Trân làm khi review: `kiem_so_A2.xlsx`, công thức Excel trên CSV, khớp `lab13.py`, lệch lớn nhất 0,11% |
 | Ngọc | Code D1 (5 câu, power, tỉ lệ mở lại) | ✅ | 1.251 · 3.103 · 1.000 · 300 · m ≥ 299; power 0,64; 4,25% và 3,97% |
 | Ngọc | `pilot_plan.yaml` đủ trường, luật dừng 4 vế, qua 2 lệnh tự kiểm | 🔧 | Review đổi 12.414 thành 12.415 cho khớp code, tách luật hoàn trùng thành luật thứ 4 |
 | Ngọc | Ghép phần D vào `lab13.py`, xoá file nháp | ✅ | `33bfa71`; `src/nhap_pilot.py` không còn |

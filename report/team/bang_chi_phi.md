@@ -25,6 +25,7 @@ Số tính bằng `src/lab13.py`. Mọi con số tính từ cột `_simulated` g
 | Hoá đơn token và tool chia cho số yêu cầu | 274,7 | (245.585 + 84.000) ÷ 1.200 | đo từ trace |
 
 - Chi phí mỗi việc thành công gấp **16,3 lần** "hoá đơn chia số yêu cầu" (4.472 ÷ 274,7, `simulated`), vì tử số tính mọi lần chạy kể cả lần lỗi và giờ nhân viên, còn mẫu số chỉ đếm 978 việc thành công. Nếu tính cả 222 ca không thành công do nhân viên làm thay, chi phí cả hệ thống là **5.865 đ/yêu cầu = 0,49×** của 12.000 đ (`simulated`).
+- **Kiểm số độc lập:** [`kiem_so_A2.xlsx`](kiem_so_A2.xlsx) tính lại A2 bằng công thức Excel (`SUM`, `COUNTIF`, `SUMPRODUCT`) trực tiếp trên hai file CSV, không dùng `lab13.py`: token 245.585, tool 84.000, lần chạy 2–3 là 93.804, tổng 4.373.585, 978 việc thành công, 4.472 đ mỗi việc thành công [simulated]. Lệch lớn nhất 0,11%, chỉ do làm tròn 16,3. Trân làm khi review, thay cho việc kiểm số giao Ngọc.
 - Khoản lớn nhất là **làm lại, chiếm 51,8%** tổng chi phí (`simulated`), tiếp theo là **xem lại 40,7%** (`simulated`); tổng giờ nhân viên chiếm 92,5% tổng chi phí.
 
 ## A3 · Tách theo loại yêu cầu
