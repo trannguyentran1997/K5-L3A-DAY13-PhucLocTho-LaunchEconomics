@@ -42,7 +42,36 @@ Nhóm chia việc theo phần riêng để không ai phải chờ ai: Đức là
 
 ## 6. Tổng hợp đóng góp
 
-Chi tiết đóng góp của từng thành viên nằm trong `TEAM.md`.
+Chi tiết đóng góp của từng thành viên nằm trong `TEAM.md`. Bảng dưới đối chiếu từng việc trong [PHAN_CONG_NHOM.md](../../PHAN_CONG_NHOM.md) với kết quả thật trên repo (giờ lấy từ `git log`, ngày 21/11).
+
+**Trạng thái:** ✅ xong · 🔧 xong, đã sửa khi review · ⏳ chưa làm hoặc chờ.
+
+| Người | Việc được giao | Trạng thái | Bằng chứng / ghi chú |
+| --- | --- | --- | --- |
+| Đức | A1: 3 hàm, qua 3 phép thử | ✅ | `lab13.py` in "ĐẠT" (1,20 · 1,25 · 1,25) |
+| Đức | A2–A4: `mo_hinh`, tách theo loại, chi phí cố định | 🔧 | 4.472 đ, 16,3 lần, A4 4.599 đ = 0,38× [simulated]; A4 bản đầu chia nhầm 982, Đức tự sửa ở `e383534` |
+| Đức | B1–B4 và `bang_chi_phi.md` đủ, không còn `...` | ✅ | B1 đủ 9 dòng, xếp hạng, B3, B4 khớp đáp án |
+| Đức | Push mốc 1 (~14:50) và mốc 2 (~15:20); sau mốc 2 không sửa `lab13.py` | ⏳ trễ | Push một lần lúc 15:38 (`80048f4`); sửa tiếp `lab13.py` lúc 15:49 sau khi Ngọc đã ghép phần D (15:44), gây xung đột khi gộp |
+| Đức | Báo cáo cá nhân | ✅ | `2A202603611_PhamDuyDuc.md` (`a631b86`) |
+| Ngọc | Kiểm số A2 bằng Excel | ⏳ | Việc thêm sau khi Ngọc đã làm xong; số A2 của Đức đã khớp đáp án nên nhóm bỏ qua |
+| Ngọc | Code D1 (5 câu, power, tỉ lệ mở lại) | ✅ | 1.251 · 3.103 · 1.000 · 300 · m ≥ 299; power 0,64; 4,25% và 3,97% |
+| Ngọc | `pilot_plan.yaml` đủ trường, luật dừng 4 vế, qua 2 lệnh tự kiểm | 🔧 | Review đổi 12.414 thành 12.415 cho khớp code, tách luật hoàn trùng thành luật thứ 4 |
+| Ngọc | Ghép phần D vào `lab13.py`, xoá file nháp | ✅ | `33bfa71`; `src/nhap_pilot.py` không còn |
+| Ngọc | Làm trên nhánh riêng | ⏳ | `73aa3d3`, `40ec4ab` push thẳng lên `main` (15:30, 15:39) |
+| Ngọc | Báo cáo cá nhân | ✅ | `2A202603602_PhamThiHongNgoc.md` |
+| Đăng | Bộ nhãn độc lập 20 ca (người gắn nhãn 1) | ✅ | Cột "Nhãn người 1" trong `bang_loi.md` |
+| Đăng | Nhập 2 bộ nhãn, tỉ lệ đồng thuận, quy tắc ca lệch | ⏳ | Chờ bộ nhãn của Trân; cột người 2 bản đầu được điền khi Trân chưa gắn, đã gỡ khi review |
+| Đăng | Bảng khắc phục 5 ca đủ 5 loại | 🔧 | Bản đầu trùng gần nguyên văn bài mẫu; viết lại bằng ca 14, 20, 16, 19, 5 |
+| Đăng | `chi_so.md`: 3 chỉ số, 2 chỉ số tự đề xuất, ≥ 6 event, E2 ≥ 2 dòng | 🔧 | 82,83% · 27,12% · 4,25%; 12 event; 4 dòng rủi ro; review thêm event cho 5 ca mới |
+| Đăng | `phieu_cham.md` | ⏳ | Điền tại buổi Gate 2a |
+| Đăng | Báo cáo cá nhân | 🔧 | `2A202603618_TranTuanDang.md`; review sửa các câu "đồng thuận 18/20" |
+| Trân | Mời collaborator | ✅ | 3 thành viên đã push được nhánh lên repo nhóm |
+| Trân | Gắn nhãn 20 ca (người gắn nhãn 2) | ⏳ | Chưa gắn |
+| Trân | Gộp nhánh, chạy lại `lab13.py` trên máy khác | ✅ | `3e9a486`, `59d4bdf`; chạy hết, số khớp đáp án |
+| Trân | `ho_so_launch_v0.md` 7 mục + đề xuất | ✅ | Go có điều kiện, 4 điều kiện có ngày; mục 5 còn trạng thái "Chưa" |
+| Trân | `TEAM.md`, `group_report.md`, báo cáo cá nhân | ✅ | `96dd876`; còn trống GitHub của Ngọc, Đăng và commit chốt |
+| Trân | Soát cuối (từ cấm, `...`, `simulated`, YAML) | ✅ | Không có từ cấm; YAML đọc được, không còn `?` |
+| Cả nhóm | 10 phút đọc phần nhau, Gate 2a, nộp link LMS | ⏳ | Sau 17:00 |
 
 ## 7. Hạn chế và hướng cải thiện
 

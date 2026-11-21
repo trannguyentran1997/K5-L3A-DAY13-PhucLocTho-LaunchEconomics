@@ -4,7 +4,7 @@
 
 - Họ tên: Nguyễn Trần Tú Trân
 - MSSV: 2A202603603
-- Email: (cần điền)
+- Email: otis7797@gmail.com
 - GitHub: trannguyentran1997
 - Vai trong nhóm: Trưởng nhóm; người gắn nhãn 2 kiêm giữ hồ sơ
 

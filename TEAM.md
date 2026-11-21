@@ -11,7 +11,7 @@
 
 | STT | Họ tên | MSSV | Email | GitHub | Vai trò |
 | --: | ------ | ---- | ----- | ------ | ------- |
-|   1 | Nguyễn Trần Tú Trân | 2A202603603 | (cần điền) | trannguyentran1997 | Trưởng nhóm; người gắn nhãn 2 kiêm giữ hồ sơ |
+|   1 | Nguyễn Trần Tú Trân | 2A202603603 | otis7797@gmail.com | trannguyentran1997 | Trưởng nhóm; người gắn nhãn 2 kiêm giữ hồ sơ |
 |   2 | Phạm Duy Đức | 2A202603611 | phamduclc3@gmail.com | DuyJob | Người viết code (A, B) |
 |   3 | Phạm Thị Hồng Ngọc | 2A202603602 | ngockarryruby@gmail.com | (cần điền) | Người viết code (D) |
 |   4 | Trần Tuấn Đăng | 2A202603618 | tuandang.04082004@gmail.com | (cần điền) | Người gắn nhãn 1 (C, E1, E2) |
