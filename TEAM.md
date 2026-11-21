@@ -54,7 +54,7 @@ Báo cáo của nhóm: `report/team/2A202603603_NguyenTranTuTran.md`, `report/te
 - Repo: tạo repo nhóm đúng tên, mời 3 thành viên làm collaborator.
 - Gộp nhánh: gộp 3 nhánh vào `main`, giải xung đột ở cuối `src/lab13.py` (giữ lời gọi phần D); chạy lại toàn bộ `lab13.py` trên máy khác với máy viết code, số khớp đáp án.
 - Review và sửa:
-  - `pilot_plan.yaml`: đổi 12.414 đ thành 12.415 đ cho khớp code; tách hoàn tiền trùng thành luật dừng thứ 4 (1 ca trong 24 giờ là dừng); ghi ngày bắt đầu 2026-12-01.
+  - `pilot_plan.yaml`: đổi 12.414 đ thành 12.415 đ cho khớp code; tách hoàn tiền trùng thành luật dừng thứ 4 (1 ca trong 24 giờ là dừng; thêm ca báo "đã hoàn" mà sổ cái không ghi); chênh 2 điểm so với đối chứng chỉ xét từ bước 10 nhân viên; ngưỡng chi phí 8.000 đ không cộng chi phí cố định; ghi ngày bắt đầu 2026-12-01.
   - `bang_loi.md`: viết lại bảng khắc phục bằng ca 14, 20, 16, 19, 5 vì bản đầu trùng gần nguyên văn bài mẫu; bỏ mục "quy tắc bổ sung"; gỡ cột nhãn người 2 được điền khi chưa có nhãn thật.
   - `chi_so.md`: thêm event `customer_notification_sent` và các thuộc tính `closed_by`, `co_ma_giam_gia`, `qua_han_du_lieu` cho 5 ca mới.
   - Báo cáo của Đăng: sửa các câu "đồng thuận 18/20" chưa đúng lúc đó, thêm ghi chú review.
@@ -114,7 +114,7 @@ Báo cáo của nhóm: `report/team/2A202603603_NguyenTranTuTran.md`, `report/te
 - Code D1 viết trong file nháp riêng rồi ghép: chia theo yêu cầu 1.251/nhóm (đối chiếu `statsmodels` 1.250); theo nhân viên m = 75: DE 2,48, 3.103/nhóm, cần 84 > 40 người; 20 nhân viên/nhóm: trần 1.000 < 1.251; 6 depot/nhóm: trần 300; MDE +6 điểm: m ≥ 299, DE 6,96.
 - Con số bất lợi: power chỉ 0,64 nếu tác động thật là +5 điểm với n = 859/nhóm; ước tính khoảng 9,7 ngày ở bước 0.50.
 - Tỉ lệ mở lại hiện tại trước khi đặt ngưỡng an toàn: 4,25% toàn mẫu, 3,97% trong phạm vi pilot.
-- `pilot_plan.yaml`: đủ mọi trường; D1, D2 và đánh đổi trong chú thích; chia theo nhân viên 20 + 20 phân tầng theo depot; `scope` lấy số A3; luật dừng đủ 4 vế; qua 2 lệnh tự kiểm. Khi review: đổi 12.414 thành 12.415, thêm luật dừng hoàn trùng thứ 4.
+- `pilot_plan.yaml`: đủ mọi trường; D1, D2 và đánh đổi trong chú thích; chia theo nhân viên 20 + 20 phân tầng theo depot; `scope` lấy số A3; luật dừng đủ 4 vế; qua 2 lệnh tự kiểm. Khi review: đổi 12.414 thành 12.415, thêm luật dừng hoàn trùng thứ 4, chỉnh luật an toàn và luật chi phí để không báo nhầm ở bước 4 nhân viên.
 - Ghép phần D vào `src/lab13.py`, chạy hết không lỗi, xoá `src/nhap_pilot.py`.
 - Báo cáo cá nhân.
 - Kiểm số A2 bằng Excel: việc thêm vào phân công sau khi Ngọc đã làm xong phần D; Trân làm thay khi review.

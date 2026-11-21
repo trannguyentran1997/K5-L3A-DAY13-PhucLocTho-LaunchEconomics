@@ -25,6 +25,8 @@
 #   Toàn mẫu đợt chạy thử: 4,25% (51/1.200); trong phạm vi noi_dia + hang_nang: 3,97% (39/982).
 #   Nếu đặt ngưỡng dừng tuyệt đối thấp hơn mức hiện tại (ví dụ 3%) thì pilot sẽ bị dừng ngay tuần đầu.
 #   Do đó đặt ngưỡng so với nhóm đối chứng (cao hơn >= 2 điểm phần trăm) kết hợp trần tuyệt đối > 6%; riêng hoàn tiền trùng là sai tiền thật nên tách thành luật dừng riêng, chỉ cần 1 ca là dừng ngay trong ngày.
+#   Luật chênh 2 điểm so với đối chứng chỉ áp dụng từ bước 0.25 (10 nhân viên); trần 6% và hoàn trùng áp dụng ngay từ bước 0.10.
+#   Ngưỡng chi phí 8.000 đ chỉ tính token, tool, giờ nhân viên; chi phí cố định theo dõi riêng ở rủi ro E2 (khối lượng thấp thì xem lại hợp đồng, không kết luận trợ lý đắt).
 
 pilot:
   owner: "Giám đốc vận hành LogiX-VN"
@@ -48,10 +50,10 @@ pilot:
     spillover_risk: "Trung bình (nguy cơ chia sẻ câu trả lời trong cùng depot) — giảm bằng phân quyền theo staff_id, ẩn trợ lý khỏi tài khoản đối chứng và log truy cập theo staff_id"
     predeclared: "Có — chỉ số chính, MDE 0,06 (nêu rõ power 0,64 ở mức 0,05), 4 luật dừng và ngày quyết định 2027-01-05 được chốt trước khi chạy pilot"
   stop_rules:
-    - "NẾU tỉ lệ mo_lai_trong_7_ngay của nhóm trợ lý cao hơn nhóm đối chứng >= 2 điểm phần trăm hoặc vượt 6% (so với mức hiện tại 3,97% trong phạm vi) TRONG 3 ngày liên tiếp THÌ Giám đốc vận hành LogiX-VN tắt trợ lý trong vòng 30 phút và chuyển sang luồng nhân viên tự làm KHÔNG THÌ không được chuyển sang bước rollout tiếp theo"
-    - "NẾU chi phí mỗi việc thành công đo thật > 8.000 đ (vượt 0,67× mức 12.000 đ) hoặc tỉ lệ xem lại duy trì > 50% (gần ngưỡng hoà vốn 11.743–12.415 đ khi xem lại 100% [simulated]) TRONG 2 tuần liên tiếp THÌ PM trợ lý hoàn phí thu hẹp phạm vi về chỉ noi_dia và giới hạn tối đa 2 lần chạy KHÔNG THÌ không được mở rộng nhóm hang_nang"
+    - "NẾU tỉ lệ mo_lai_trong_7_ngay của nhóm trợ lý vượt 6% ở bất kỳ bước rollout nào (mức hiện tại 3,97% trong phạm vi), hoặc cao hơn nhóm đối chứng >= 2 điểm phần trăm từ bước 0.25 (10 nhân viên) trở đi (ở bước 4 nhân viên lệch 2 điểm quá dễ xảy ra do ngẫu nhiên) TRONG 3 ngày liên tiếp THÌ Giám đốc vận hành LogiX-VN tắt trợ lý trong vòng 30 phút và chuyển sang luồng nhân viên tự làm KHÔNG THÌ không được chuyển sang bước rollout tiếp theo"
+    - "NẾU chi phí mỗi việc thành công đo thật, chỉ tính token, tool và giờ nhân viên (không cộng chi phí cố định 40 triệu/tháng, vì ở bước 4 nhân viên riêng khoản này đã khoảng 11.900 đ/việc), > 8.000 đ (vượt 0,67× mức 12.000 đ) hoặc tỉ lệ xem lại duy trì > 50% (gần ngưỡng hoà vốn 11.743–12.415 đ khi xem lại 100% [simulated]) TRONG 2 tuần liên tiếp THÌ PM trợ lý hoàn phí thu hẹp phạm vi về chỉ noi_dia và giới hạn tối đa 2 lần chạy KHÔNG THÌ không được mở rộng nhóm hang_nang"
     - "NẾU tỉ lệ bỏ qua gợi ý (sua + bo trên số được xem lại) > 40% (so với 27,12% ở đợt chạy thử) hoặc tỉ lệ nhân viên nhóm trợ lý sử dụng công cụ < 50% TRONG 1 tuần liên tiếp THÌ Trưởng nhóm CSKH phỏng vấn ít nhất 5 nhân viên trong vòng 3 ngày và điều chỉnh gợi ý KHÔNG THÌ không được tăng tỉ lệ rollout sang bước kế tiếp"
-    - "NẾU phát sinh >= 1 ca hoàn tiền trùng (2 bản ghi refund_ledger_write thành công cho cùng một mã đơn) TRONG bất kỳ 24 giờ nào THÌ Giám đốc vận hành LogiX-VN tắt trợ lý trong vòng 30 phút và Kế toán trưởng thu hồi khoản hoàn thừa trong 2 ngày làm việc KHÔNG THÌ không được bật lại trợ lý trước khi Kỹ sư trưởng agent sửa xong khoá chống trùng (ca 20) và đối soát sổ cái (ca 7)"
+    - "NẾU phát sinh >= 1 ca hoàn tiền trùng (2 bản ghi refund_ledger_write thành công cho cùng một mã đơn) hoặc >= 1 ca báo khách 'đã hoàn' mà sổ cái không có bản ghi thành công cùng trace_id TRONG bất kỳ 24 giờ nào THÌ Giám đốc vận hành LogiX-VN tắt trợ lý trong vòng 30 phút và Kế toán trưởng thu hồi khoản hoàn thừa trong 2 ngày làm việc KHÔNG THÌ không được bật lại trợ lý trước khi Kỹ sư trưởng agent sửa xong khoá chống trùng (ca 20) và đối soát sổ cái (ca 7)"
   interim_looks: "chỉ kiểm tra chỉ số an toàn hằng ngày và cuối mỗi tuần; không kiểm định sớm chỉ số chính trước ngày quyết định"
   rollback: "Giám đốc vận hành LogiX-VN bấm cờ tắt trợ lý, hiệu lực trong 30 phút; toàn bộ yêu cầu được chuyển ngay về luồng nhân viên CSKH tự xử lý không gián đoạn"
   decision_date: "2027-01-05"     # bắt đầu 2026-12-01; sau 4 tuần rollout (1 tuần 0.10 + 1 tuần 0.25 + 2 tuần 0.50) + 7 ngày đóng cửa sổ mo_lai_trong_7_ngay

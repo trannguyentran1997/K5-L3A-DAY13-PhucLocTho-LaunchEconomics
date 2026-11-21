@@ -30,7 +30,8 @@ Nhóm chia việc theo phần riêng để không ai phải chờ ai: Đức là
 - Chỉ số trong đợt chạy thử: chính 82,83%, bỏ qua gợi ý 27,12%, mở lại 7 ngày 4,25%.
 - Pilot: 20 + 20 nhân viên, n = 859/nhóm, m ≥ 299; power chỉ 0,64 nếu tác động thật là +5 điểm.
 - **Đề xuất: Go có điều kiện** cho pilot `noi_dia` + `hang_nang`, với 4 điều kiện có người phụ trách và ngày kiểm tra (xem hồ sơ).
-- Kết quả duyệt chéo Gate 2a nhóm nhận được: ghi sau buổi duyệt chéo.
+- Nhóm mình chấm nhóm TENGICUNGDUOC: 30/30, quyết định Go có điều kiện, 1 câu hỏi về luật dừng chi phí ([phieu_cham.md](phieu_cham.md)).
+- Kết quả duyệt chéo Gate 2a nhóm nhận được: chờ phiếu của nhóm hội đồng.
 
 ## 5. Khó khăn và cách xử lý
 
@@ -39,39 +40,20 @@ Nhóm chia việc theo phần riêng để không ai phải chờ ai: Đức là
 - **Xung đột khi gộp `src/lab13.py`:** nhánh của Ngọc đã gộp bản lỗi mã hoá của Đức, còn bản sửa của Đức đến sau. Git tự gộp phần lớn; xung đột duy nhất ở cuối khối main, giữ lời gọi phần D của Ngọc.
 - **Review phát hiện 2 vấn đề ở nhiệm vụ C:** bảng khắc phục bản đầu trùng gần nguyên văn bài làm mẫu, nên đã viết lại bằng 5 ca khác. Cột nhãn người 2 bản đầu được điền khi Trân chưa gắn nhãn, nên đã gỡ; sau đó Trân hoàn thành gắn nhãn 20 ca và cập nhật lại `bang_loi.md` (đồng thuận 20/20 = 100%).
 - **Môi trường:** máy trưởng nhóm thiếu `statsmodels`, phải tạo `src/.venv` theo `src/README.md` (lệnh `python -m venv .venv` rồi `pip install -r requirements.txt`) mới chạy được phần D. Mạng tới github.com chập chờn, một số lần push phải chạy lại.
+- **Luật dừng dễ báo nhầm:** trước Gate 2a nhóm thấy 2 luật trong `pilot_plan.yaml` sẽ kích hoạt dù trợ lý chạy đúng như đợt thử: chênh 2 điểm so với đối chứng khi mới có 4 nhân viên (lệch ngẫu nhiên), và ngưỡng 8.000 đ nếu cộng 40 triệu cố định (khoảng 15.300 đ/việc ở bước 4 nhân viên). Đã sửa: chênh 2 điểm chỉ áp dụng từ bước 10 nhân viên, ngưỡng 8.000 đ chỉ tính token, tool và giờ người; báo "đã hoàn" mà sổ cái không ghi thì dừng ngay như hoàn trùng.
 
 ## 6. Tổng hợp đóng góp
 
-Chi tiết đóng góp của từng thành viên nằm trong `TEAM.md`. Bảng dưới đối chiếu từng việc trong [PHAN_CONG_NHOM.md](../../PHAN_CONG_NHOM.md) với kết quả thật trên repo (giờ lấy từ `git log`, ngày 21/11).
+Chi tiết từng việc, trạng thái và commit của mỗi thành viên nằm trong [TEAM.md](../../TEAM.md); bảng phân công ở [PHAN_CONG_NHOM.md](../../PHAN_CONG_NHOM.md).
 
-**Trạng thái:** ✅ xong · 🔧 xong, đã sửa khi review · ⏳ chưa làm hoặc chờ.
+| Người | Phần | Kết quả chính |
+| --- | --- | --- |
+| Trân | Tổng hợp, gắn nhãn 2, kiểm số A2, phiếu chấm | Gộp và review 3 nhánh; `kiem_so_A2.xlsx` khớp `lab13.py` (lệch lớn nhất 0,11%); nhãn 20/20; hồ sơ 7 mục; phiếu chấm TENGICUNGDUOC 30/30 |
+| Đức | A + B | Qua 3 phép thử A1; 4.472 đ, gấp 16,3 lần [simulated]; B1–B4 khớp đáp án |
+| Ngọc | D | Năm câu D1, power 0,64; `pilot_plan.yaml` chia 20 + 20 nhân viên |
+| Đăng | C, E1, E2 | Bộ nhãn người 1; 3 chỉ số; 12 event có `trace_id`; 4 dòng rủi ro kinh tế |
 
-| Người | Việc được giao | Trạng thái | Bằng chứng / ghi chú |
-| --- | --- | --- | --- |
-| Đức | A1: 3 hàm, qua 3 phép thử | ✅ | `lab13.py` in "ĐẠT" (1,20 · 1,25 · 1,25) |
-| Đức | A2–A4: `mo_hinh`, tách theo loại, chi phí cố định | 🔧 | 4.472 đ, 16,3 lần, A4 4.599 đ = 0,38× [simulated]; A4 bản đầu chia nhầm 982, Đức tự sửa ở `e383534` |
-| Đức | B1–B4 và `bang_chi_phi.md` đủ, không còn `...` | ✅ | B1 đủ 9 dòng, xếp hạng, B3, B4 khớp đáp án |
-| Đức | Push mốc 1 (~14:50) và mốc 2 (~15:20); sau mốc 2 không sửa `lab13.py` | ⏳ trễ | Push một lần lúc 15:38 (`80048f4`); sửa tiếp `lab13.py` lúc 15:49 sau khi Ngọc đã ghép phần D (15:44), gây xung đột khi gộp |
-| Đức | Báo cáo cá nhân | ✅ | `2A202603611_PhamDuyDuc.md` (`a631b86`) |
-| Ngọc → Trân | Kiểm số A2 bằng Excel | ✅ | Ngọc chưa làm (việc thêm sau); Trân làm khi review: `kiem_so_A2.xlsx`, công thức Excel trên CSV, khớp `lab13.py`, lệch lớn nhất 0,11% |
-| Ngọc | Code D1 (5 câu, power, tỉ lệ mở lại) | ✅ | 1.251 · 3.103 · 1.000 · 300 · m ≥ 299; power 0,64; 4,25% và 3,97% |
-| Ngọc | `pilot_plan.yaml` đủ trường, luật dừng 4 vế, qua 2 lệnh tự kiểm | 🔧 | Review đổi 12.414 thành 12.415 cho khớp code, tách luật hoàn trùng thành luật thứ 4 |
-| Ngọc | Ghép phần D vào `lab13.py`, xoá file nháp | ✅ | `33bfa71`; `src/nhap_pilot.py` không còn |
-| Ngọc | Làm trên nhánh riêng | ⏳ | `73aa3d3`, `40ec4ab` push thẳng lên `main` (15:30, 15:39) |
-| Ngọc | Báo cáo cá nhân | ✅ | `2A202603602_PhamThiHongNgoc.md` |
-| Đăng | Bộ nhãn độc lập 20 ca (người gắn nhãn 1) | ✅ | Cột "Nhãn người 1" trong `bang_loi.md` |
-| Đăng | Nhập 2 bộ nhãn, tỉ lệ đồng thuận, quy tắc ca lệch | 🔧 | Đã nhập đủ 2 bộ nhãn vào `bang_loi.md` (đồng thuận 20/20 = 100%); cột người 2 bản đầu điền khi Trân chưa gắn đã gỡ khi review và điền lại sau khi có bộ nhãn của Trân |
-| Đăng | Bảng khắc phục 5 ca đủ 5 loại | 🔧 | Bản đầu trùng gần nguyên văn bài mẫu; viết lại bằng ca 14, 20, 16, 19, 5 |
-| Đăng | `chi_so.md`: 3 chỉ số, 2 chỉ số tự đề xuất, ≥ 6 event, E2 ≥ 2 dòng | 🔧 | 82,83% · 27,12% · 4,25%; 12 event; 4 dòng rủi ro; review thêm event cho 5 ca mới |
-| Đăng → Trân | `phieu_cham.md` | 🔧 | Trân chấm nhóm TENGICUNGDUOC: 30/30, Go có điều kiện, 1 câu hỏi về luật dừng chi phí; còn ghi câu trả lời của đội trình |
-| Đăng | Báo cáo cá nhân | 🔧 | `2A202603618_TranTuanDang.md`; review sửa các câu "đồng thuận 18/20" và cập nhật đồng thuận 20/20 sau khi có bộ nhãn của Trân |
-| Trân | Mời collaborator | ✅ | 3 thành viên đã push được nhánh lên repo nhóm |
-| Trân | Gắn nhãn 20 ca (người gắn nhãn 2) | ✅ | Hoàn thành 20/20 ca theo quy tắc 5 bước Google PAIR, đồng thuận 20/20 = 100% với Đăng |
-| Trân | Gộp nhánh, chạy lại `lab13.py` trên máy khác | ✅ | `3e9a486`, `59d4bdf`; chạy hết, số khớp đáp án |
-| Trân | `ho_so_launch_v0.md` 7 mục + đề xuất | ✅ | Go có điều kiện, 4 điều kiện có ngày; đủ 7 mục, mục 5 đã chuyển "Xong, có bằng chứng" |
-| Trân | `TEAM.md`, `group_report.md`, báo cáo cá nhân | ✅ | `96dd876`; còn trống GitHub của Ngọc, Đăng và commit chốt |
-| Trân | Soát cuối (từ cấm, `...`, `simulated`, YAML) | ✅ | Không có từ cấm; YAML đọc được, không còn `?` |
-| Cả nhóm | 10 phút đọc phần nhau, Gate 2a, nộp link LMS | ⏳ | Sau 17:00 |
+Sửa khi review: A4 chia nhầm mẫu số (Đức tự sửa); số 12.415 đ và luật dừng trong `pilot_plan.yaml`; bảng khắc phục viết lại vì trùng bài mẫu; cột nhãn người 2 gỡ rồi nhập lại bằng nhãn thật của Trân. Về quy trình: Đức push một lần thay vì 2 mốc, Ngọc push 2 commit đầu thẳng lên `main`.
 
 ## 7. Hạn chế và hướng cải thiện
 

@@ -254,14 +254,14 @@ Kịch bản, mỗi đoạn ứng với một tiêu chí để hội đồng d�
 | Vì sao tử số tính mọi lần chạy? | Lần chạy lỗi vẫn tốn tiền; mẫu số chỉ đếm 978 việc làm xong |
 | Hai bộ nhãn trùng 20/20? | Gắn độc lập trên phiếu riêng, có ảnh chụp; Trân giải thích 1–2 ca từng phân vân, ví dụ ca 18 là Ngữ cảnh vì số tiền tính đúng chính sách |
 
-### 5.4 Hai điểm yếu của luật dừng cần sửa hoặc chủ động nêu
+### 5.4 Hai điểm yếu của luật dừng (đã sửa trong `pilot_plan.yaml`)
 
-Rút ra từ `slide-d1-ba-cach-chia.html`. Hội đồng hỏi vào đây thì C8 dễ chỉ còn 5 điểm:
+Rút ra từ slide D1 nội bộ của nhóm. Hội đồng hỏi vào đây thì C8 dễ chỉ còn 5 điểm; cả hai đã sửa trong `pilot_plan.yaml` theo đúng cách nêu dưới đây:
 
 1. **Luật dừng 1** bắt lệch ≥ 2 điểm so với đối chứng ở mọi bước, kể cả khi mới mở cho 4 người. Với 4 người, lệch 2 điểm rất dễ xảy ra do ngẫu nhiên (slide ước tính 56/1.000 lần dù trợ lý không gây thêm lỗi; 10 người còn 8/1.000). Cách sửa: mở lại vượt 6%, hoàn trùng, hoặc báo "đã hoàn" mà sổ cái không ghi thì tắt ngay ở mọi bước; điều kiện "lệch ≥ 2 điểm so với đối chứng" chỉ áp dụng từ bước 10 người.
 2. **Luật dừng 2** (chi phí > 8.000 đ) chưa ghi rõ có tính tiền thuê 40 triệu/tháng không. Nếu tính, ở bước 4 người chi phí khoảng 15.300 đ mỗi việc nên luật kêu ngay dù tiền máy và giờ người không đổi (10 người khoảng 8.200 đ, 20 người khoảng 5.800 đ). Cách sửa: ghi rõ 8.000 đ chỉ tính token, tool và giờ người; tiền thuê theo dõi riêng ở rủi ro E2 ("ít đơn thì xem lại hợp đồng, không kết luận trợ lý đắt").
 
-Nếu chưa kịp sửa `pilot_plan.yaml` trước 17:00, Trân nêu luôn hai điểm này kèm cách sửa khi trình bày: tự nêu điểm yếu kèm cách xử lý vẫn được tính ở C6.
+Khi trình bày, Trân có thể chủ động nêu hai điểm này và cách nhóm đã sửa: tự nêu điểm yếu kèm cách xử lý được tính ở C6.
 
 ## 6. Quy ước làm chung
 
