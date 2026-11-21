@@ -82,7 +82,7 @@ Ngoài ra, cả nhóm cùng làm ba việc chung: duyệt chéo Gate 2a (17:00),
 - [x] `bang_loi.md`: nhập cả hai bộ nhãn **đúng như lúc gắn độc lập, không sửa sau khi đã so**; tỉ lệ đồng thuận = số ca trùng ÷ 20 (cần ≥ 16/20, thấp hơn thì viết lại định nghĩa); một câu quy tắc cho mỗi ca lệch; bảng khắc phục 5 ca đủ 5 loại, mỗi dòng có cách phát hiện đo được (event, ngưỡng, tần suất) và một vai trò phụ trách.
 - [x] `chi_so.md` E1: tự tính 3 chỉ số (chính, dùng, an toàn) bằng vài dòng pandas, ghi đoạn code vào file làm cách tính; thêm 1 chỉ số dùng + 1 chỉ số an toàn tự đề xuất; ≥ 6 event, mỗi event có `trace_id`; kiểm tra chéo chỉ số nào tính từ event nào. Viết "chỉ số trong đợt chạy thử là …", không viết "trợ lý đã nâng chỉ số".
 - [x] Làm cuối: E2, ≥ 2 dòng rủi ro kinh tế, số lấy từ bảng độ nhạy trong `bang_chi_phi.md`.
-- [x] *Trân soạn bản nháp chấm nhóm TENGICUNGDUOC; cả nhóm chốt tại buổi.* Gate 2a: giữ `phieu_cham.md`, chấm nhóm n + 1 theo 3 tiêu chí, điểm nào cũng có lý do bằng số, kèm quyết định và một câu hỏi; ghi lại câu trả lời của đội trình.
+- [x] *Trân chấm nhóm TENGICUNGDUOC (30/30, Go có điều kiện); còn ghi câu trả lời của đội trình.* Gate 2a: giữ `phieu_cham.md`, chấm nhóm n + 1 theo 3 tiêu chí, điểm nào cũng có lý do bằng số, kèm quyết định và một câu hỏi; ghi lại câu trả lời của đội trình.
 - **Xong khi:** `bang_loi.md`, `chi_so.md` không còn `...`; sau Gate 2a thì `phieu_cham.md` đủ.
 
 ### Trân · Phần tổng hợp (trưởng nhóm)

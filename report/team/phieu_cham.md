@@ -18,6 +18,6 @@ Nhóm số n chấm nhóm số n + 1; nhóm cuối chấm nhóm 1. Chấm theo b
 
 **Một câu hỏi cho đội trình:** Luật dừng chi phí của nhóm tính gộp cả 40 triệu cố định. Ở bước 4 nhân viên, chi phí mỗi việc thành công đã khoảng 15.300 đ, ở bước 10 nhân viên khoảng 8.155 đ, đều vượt 8.000 đ dù trợ lý chạy đúng như đợt thử. Vậy pilot có bị thu hẹp về `noi_dia` trước khi tới bước 20 người, và nhóm sẽ không đo được `hang_nang` không?
 
-**Câu trả lời của đội trình (ghi lại tại buổi):** (ghi tại buổi)
+**Câu trả lời của đội trình (ghi lại tại buổi):** (chưa có, điền nguyên văn câu trả lời của nhóm TENGICUNGDUOC sau phần hỏi đáp)
 
-*Ghi chú: bản nháp do Trân soạn cùng Claude Code từ bằng chứng trong repo nhóm được chấm (commit `1da04c2`); cả nhóm hội đồng xem lại và chốt điểm tại buổi.*
+*Ghi chú: Trân soạn phiếu cùng Claude Code từ bằng chứng trong repo nhóm được chấm (commit `1da04c2`). Điểm C8 giữ 10 theo đúng câu chữ rubric (có đối chứng, đủ mẫu, luật dừng có ngưỡng, thời hạn, người dừng); lỗi luật dừng chi phí là lỗi thiết kế nên đưa vào câu hỏi, không trừ điểm.*
