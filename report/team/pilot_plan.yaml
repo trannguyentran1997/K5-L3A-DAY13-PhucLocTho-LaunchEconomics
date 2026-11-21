@@ -49,7 +49,7 @@ pilot:
     predeclared: "Có — chỉ số chính, MDE 0,06 (nêu rõ power 0,64 ở mức 0,05), 3 luật dừng và ngày quyết định 2027-01-05 được chốt trước khi chạy pilot"
   stop_rules:
     - "NẾU tỉ lệ mo_lai_trong_7_ngay của nhóm trợ lý cao hơn nhóm đối chứng >= 2 điểm phần trăm hoặc vượt 6% (so với mức hiện tại 3,97% trong phạm vi), hoặc phát sinh >= 1 ca hoàn tiền trùng TRONG 3 ngày liên tiếp THÌ Giám đốc vận hành LogiX-VN tắt trợ lý trong vòng 30 phút và chuyển sang luồng nhân viên tự làm KHÔNG THÌ không được chuyển sang bước rollout tiếp theo"
-    - "NẾU chi phí mỗi việc thành công đo thật > 8.000 đ (vượt 0,67× mức 12.000 đ) hoặc tỉ lệ xem lại duy trì > 50% (gần ngưỡng hoà vốn 11.743–12.414 đ khi xem lại 100% [simulated]) TRONG 2 tuần liên tiếp THÌ PM trợ lý hoàn phí thu hẹp phạm vi về chỉ noi_dia và giới hạn tối đa 2 lần chạy KHÔNG THÌ không được mở rộng nhóm hang_nang"
+    - "NẾU chi phí mỗi việc thành công đo thật > 8.000 đ (vượt 0,67× mức 12.000 đ) hoặc tỉ lệ xem lại duy trì > 50% (gần ngưỡng hoà vốn 11.743–12.415 đ khi xem lại 100% [simulated]) TRONG 2 tuần liên tiếp THÌ PM trợ lý hoàn phí thu hẹp phạm vi về chỉ noi_dia và giới hạn tối đa 2 lần chạy KHÔNG THÌ không được mở rộng nhóm hang_nang"
     - "NẾU tỉ lệ bỏ qua gợi ý (sua + bo trên số được xem lại) > 40% (so với 27,12% ở đợt chạy thử) hoặc tỉ lệ nhân viên nhóm trợ lý sử dụng công cụ < 50% TRONG 1 tuần liên tiếp THÌ Trưởng nhóm CSKH phỏng vấn ít nhất 5 nhân viên trong vòng 3 ngày và điều chỉnh gợi ý KHÔNG THÌ không được tăng tỉ lệ rollout sang bước kế tiếp"
   interim_looks: "chỉ kiểm tra chỉ số an toàn hằng ngày và cuối mỗi tuần; không kiểm định sớm chỉ số chính trước ngày quyết định"
   rollback: "Giám đốc vận hành LogiX-VN bấm cờ tắt trợ lý, hiệu lực trong 30 phút; toàn bộ yêu cầu được chuyển ngay về luồng nhân viên CSKH tự xử lý không gián đoạn"
@@ -59,5 +59,5 @@ pilot:
     - "chi_phi_moi_viec_thanh_cong_hang_nang: 8.221 đ = 0,69× mức 12.000 đ (tính từ phut_xem_lai_simulated và phut_lam_lai_simulated) [simulated]"
     - "chi_phi_moi_viec_thanh_cong_quoc_te: 22.515 đ = 1,88× mức 12.000 đ (cơ sở loại khỏi phạm vi) [simulated]"
     - "chi_phi_moi_viec_thanh_cong_doi_tac: 10.215 đ = 0,85× mức 12.000 đ (cơ sở loại khỏi phạm vi) [simulated]"
-    - "chi_phi_xem_lai_100_phan_tram: 11.743 đ (0,98× với 9 phút làm lại) đến 12.414 đ (1,03× với 15,3 phút làm lại trung bình dữ liệu) [simulated]"
+    - "chi_phi_xem_lai_100_phan_tram: 11.743 đ (0,98× với 9 phút làm lại) đến 12.415 đ (1,03× với 15,3 phút làm lại trung bình dữ liệu) [simulated]"
     - "ke_hoach_thay_the_so_gia_lap: thay phut_xem_lai_simulated và phut_lam_lai_simulated bằng thời gian đo thật từ event staff_review_decision và staff_rework_completed sau tuần 1 pilot"

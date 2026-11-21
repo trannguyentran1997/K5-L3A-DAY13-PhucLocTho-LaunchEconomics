@@ -4,39 +4,38 @@
 
 ## Hai bộ nhãn độc lập
 
-Người gắn nhãn 1: **Đăng** · Người gắn nhãn 2: **Trân** (gắn trong 8 phút, không trao đổi)
+Người gắn nhãn 1: **Đăng** · Người gắn nhãn 2: **Trân** (gắn trong 8 phút, không trao đổi). **Chưa xong:** Trân chưa gắn nhãn; cột người 2, cột "Trùng?", "Nhãn thống nhất" và tỉ lệ đồng thuận điền sau khi có phiếu thật của Trân.
 
 | Ca | Nhãn người 1 (Đăng) | Nhãn người 2 (Trân) | Trùng? | Nhãn thống nhất |
 | --: | --- | --- | :---: | --- |
-| 1 | Do người dùng | Do người dùng | Có | Do người dùng |
-| 2 | Hệ thống | Hệ thống | Có | Hệ thống |
-| 3 | Ngữ cảnh | Ngữ cảnh | Có | Ngữ cảnh |
-| 4 | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
-| 5 | Ngầm | Ngầm | Có | Ngầm |
-| 6 | Do người dùng | Hệ thống | Không | Do người dùng |
-| 7 | Hệ thống | Hệ thống | Có | Hệ thống |
-| 8 | Hệ thống | Hệ thống | Có | Hệ thống |
-| 9 | Do người dùng | Do người dùng | Có | Do người dùng |
-| 10 | Ngữ cảnh | Ngữ cảnh | Có | Ngữ cảnh |
-| 11 | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
-| 12 | Ngầm | Ngầm | Có | Ngầm |
-| 13 | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
-| 14 | Do người dùng | Do người dùng | Có | Do người dùng |
-| 15 | Hệ thống | Hệ thống | Có | Hệ thống |
-| 16 | Ngữ cảnh | Ngữ cảnh | Có | Ngữ cảnh |
-| 17 | Ngầm | Ngầm | Có | Ngầm |
-| 18 | Ngữ cảnh | Hệ thống | Không | Ngữ cảnh |
-| 19 | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
-| 20 | Hệ thống | Hệ thống | Có | Hệ thống |
+| 1 | Do người dùng | (chờ Trân) |  |  |
+| 2 | Hệ thống | (chờ Trân) |  |  |
+| 3 | Ngữ cảnh | (chờ Trân) |  |  |
+| 4 | Giới hạn hệ thống | (chờ Trân) |  |  |
+| 5 | Ngầm | (chờ Trân) |  |  |
+| 6 | Do người dùng | (chờ Trân) |  |  |
+| 7 | Hệ thống | (chờ Trân) |  |  |
+| 8 | Hệ thống | (chờ Trân) |  |  |
+| 9 | Do người dùng | (chờ Trân) |  |  |
+| 10 | Ngữ cảnh | (chờ Trân) |  |  |
+| 11 | Giới hạn hệ thống | (chờ Trân) |  |  |
+| 12 | Ngầm | (chờ Trân) |  |  |
+| 13 | Giới hạn hệ thống | (chờ Trân) |  |  |
+| 14 | Do người dùng | (chờ Trân) |  |  |
+| 15 | Hệ thống | (chờ Trân) |  |  |
+| 16 | Ngữ cảnh | (chờ Trân) |  |  |
+| 17 | Ngầm | (chờ Trân) |  |  |
+| 18 | Ngữ cảnh | (chờ Trân) |  |  |
+| 19 | Giới hạn hệ thống | (chờ Trân) |  |  |
+| 20 | Hệ thống | (chờ Trân) |  |  |
 
-**Tỉ lệ đồng thuận:** 18 / 20 = 90% (đạt yêu cầu ≥ 80%)
+**Tỉ lệ đồng thuận:** chờ bộ nhãn của Trân
 
 ## Quy tắc phân biệt cho các ca không trùng
 
 Mỗi ca không trùng một câu. Đồng thuận dưới 80% thì ghi định nghĩa đã viết lại.
 
-- **Ca 6 (Do người dùng, Trân phân vân Hệ thống):** Nguyên nhân gốc là khách hàng chọn sai phân loại lý do hoàn tiền (chọn giao trễ thay vì hàng vỡ); việc trợ lý chưa đọc hiểu mô tả để chuyển luồng là hướng cải tiến giải pháp chứ không làm thay đổi lỗi gốc từ phía người dùng.
-- **Ca 18 (Ngữ cảnh, Trân phân vân Hệ thống):** Trợ lý tính đúng 100% số tiền theo chính sách (15.000 đ), lỗi phát sinh do sự lệch pha về ngữ cảnh giao tiếp (tin nhắn không kèm phép tính khiến khách hàng hiểu lầm là hoàn thiếu).
+- Chờ so nhãn: mỗi ca lệch giữa Đăng và Trân ghi một câu quy tắc phân biệt tại đây.
 - **Quy tắc phân biệt bổ sung cho các ca dễ lẫn:**
   - *Ca 8, 15 là Hệ thống, không phải Ngầm:* Sai sót đã lộ diện rõ ràng (dẫn sai điều khoản văn bản hoặc bị nhân viên review phát hiện trước khi gửi).
   - *Ca 13 là Giới hạn hệ thống:* Yêu cầu nằm ngoài phạm vi dịch vụ của LogiX-VN thì bản chất là giới hạn nghiệp vụ, bất kể trợ lý trả lời chung chung hay từ chối thẳng.
