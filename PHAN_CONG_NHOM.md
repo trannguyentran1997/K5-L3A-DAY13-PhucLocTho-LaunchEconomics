@@ -45,15 +45,15 @@ Ngoài ra, cả nhóm cùng làm ba việc chung: duyệt chéo Gate 2a (17:00),
 - [x] Trong `src/lab13.py`, viết 3 hàm A1 ở dòng `TODO CP1`. **Chưa đạt cả ba (1,20 · 1,25 · 1,25) thì không làm tiếp.**
 - [x] Viết `mo_hinh(runs, reqs, …)` (A2): tử số tính **mọi** lần chạy kể cả lần lỗi, mẫu số chỉ đếm `ket_qua == 'thanh_cong'`. Số tự đối chiếu: khoảng 4.472 đ mỗi việc thành công [simulated], 978 việc thành công, gấp khoảng 16,3 lần hoá đơn chia số yêu cầu.
 - [x] A3: gọi lại `mo_hinh` cho 4 giá trị `loai`, tính thêm tỉ lệ ok theo từng lần thử. A4: cộng cố định 40 triệu/tháng cho phạm vi `noi_dia` + `hang_nang`.
-- [x] **Push mốc 1** (`lab13.py` + `bang_chi_phi.md` có A2, A3, A4).
+- [x] **Push mốc 1** (`lab13.py` + `bang_chi_phi.md` có A2, A3, A4). *Thực tế: không tách mốc, push một lần lúc 15:38 (`80048f4`).*
 - [x] B1 (9 kịch bản), B2 (cặp), B3 (giới hạn 1/2/3 lần, chi phí cả hệ thống), B4 (xem lại 100%, ghi cả mức 9 phút và 15,3 phút).
 - [x] Điền đủ `bang_chi_phi.md`: A2 9 dòng (hai dòng xem lại, làm lại có nhãn `simulated`), A3 4 dòng, A4, B1 9 dòng, xếp hạng 3 yếu tố, B3, B4 (mỗi câu ≤ 3 dòng, có số).
-- [x] **Push mốc 2**, nhắn nhóm "lab13.py xong phần A, B". Sau mốc này Đức không sửa `lab13.py` nữa.
+- [x] **Push mốc 2**, nhắn nhóm "lab13.py xong phần A, B". Sau mốc này Đức không sửa `lab13.py` nữa. *Thực tế: Đức sửa tiếp `lab13.py` lúc 15:49 (`e383534`) sau khi Ngọc đã ghép phần D, gây một xung đột khi gộp; trưởng nhóm đã giải.*
 - **Xong khi:** `python lab13.py` in ba phép thử ĐẠT, bảng A2, A3, B; `bang_chi_phi.md` không còn `...`.
 
 ### Ngọc · Kiểm số chi phí + phần pilot (D)
 
-- [ ] **14:10–14:25, kiểm số A2 bằng Excel, không xem code của Đức.** Mở hai file CSV trong `src/` bằng Excel, tính 5 tổng rồi ghép thành chi phí mỗi việc thành công:
+- [x] *Trân làm thay khi review: `report/team/kiem_so_A2.xlsx`, khớp `lab13.py` 11/11 khoản, lệch lớn nhất 0,11%.* **14:10–14:25, kiểm số A2 bằng Excel, không xem code của Đức.** Mở hai file CSV trong `src/` bằng Excel, tính 5 tổng rồi ghép thành chi phí mỗi việc thành công:
 
   | Khoản | Cách tính trong Excel |
   | --- | --- |
