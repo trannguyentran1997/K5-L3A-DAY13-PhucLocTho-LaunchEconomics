@@ -17,7 +17,8 @@
 
 ## 3. Đóng góp cụ thể
 
-- **Thiết lập môi trường và viết code phần D (`src/nhap_pilot.py`, sẽ ghép vào `src/lab13.py`):**
+- **Thiết lập môi trường và viết code phần D (ghép vào `src/lab13.py`):**
+  - Ban đầu viết độc lập trong `src/nhap_pilot.py` để tránh xung đột với phần A, B của Đức; sau khi Đức hoàn thành nhánh `PhamDuyDuc-2A202603611` (`80048f4`), đã ghép hàm `co_mau` và `phan_tich_pilot_d` vào `src/lab13.py`, chạy kiểm thử toàn bộ A + B + D không lỗi và xoá file nháp `src/nhap_pilot.py`.
   - Đọc dữ liệu `logix_requests.csv` với `keep_default_na=False` để tránh lỗi đọc ô trống thành `NaN`.
   - Xây dựng hàm `co_mau(p1, p2, alpha=0.05, power=0.80)` và hàm `phan_tich_pilot_d(reqs)` đối chiếu song song công thức chuẩn hai tỉ lệ với `statsmodels.stats.power.NormalIndPower`.
   - Tính đủ 5 câu D1:
@@ -36,16 +37,16 @@
 
 ## 4. Bằng chứng
 
-- File code nháp phần D: `src/nhap_pilot.py` (sẽ ghép vào `src/lab13.py` và xoá file nháp sau mốc 2 của Đức).
-- File kế hoạch pilot: `report/team/pilot_plan.yaml` (đã qua kiểm tra `yaml.safe_load`, không còn dấu `?` ngoài dòng chú thích, không có từ bị cấm theo quy tắc 5).
-- Kết quả chạy `python nhap_pilot.py` trong `src/`:
+- Code phần D tích hợp trong `src/lab13.py` (đã chạy toàn bộ A1, A2, A3, A4, B1–B4, D1 không lỗi; đã xoá file nháp `src/nhap_pilot.py`).
+- File kế hoạch pilot: `report/team/pilot_plan.yaml` (đã đối chiếu dòng `scope` khớp 100% với bảng A3 trong `report/team/bang_chi_phi.md` của Đức; qua kiểm tra `yaml.safe_load`, không còn dấu `?` ngoài dòng chú thích, không có từ bị cấm theo quy tắc 5).
+- Kết quả chạy `python lab13.py` trong `src/` (phần D1):
   - `a) 1.251 yêu cầu/nhóm (statsmodels: 1.250)`
   - `b) DE = 2,48; n = 3.103 yêu cầu/nhóm; 42 NV/nhóm (tổng 84 > 40)`
   - `c) n_eff tối đa = 1.000 < 1.251`
   - `d) n_eff tối đa = 300 < 1.251`
   - `e) m >= 299 yêu cầu/NV (DE = 6,96; n_eff = 859,20); power ở mức +5 điểm = 0,6417`
   - `mo_lai_trong_7_ngay`: toàn mẫu `4,25%` (`51/1.200`), phạm vi pilot `3,97%` (`39/982`).
-- Commit trên GitHub: cập nhật mã commit sau khi push nhánh `main`.
+- Nhánh & commit trên GitHub: nhánh `PhamThiHongNgoc-2A202603602` (gồm các commit `73aa3d3`, `40ec4ab`, và commit tích hợp phần D vào `src/lab13.py` sẵn sàng để nhóm trưởng merge).
 
 ## 5. Công cụ AI đã dùng
 
@@ -60,4 +61,4 @@
 ## 6. Tự đánh giá
 
 - **Điểm làm tốt:** Hoàn thành đầy đủ Nhiệm vụ D đúng phân công, đảm bảo độc lập về file để không gây xung đột Git với các thành viên khác; tất cả con số đều tính từ code chạy trên CSV gốc, có nhãn `simulated` đầy đủ và nêu thẳng con số bất lợi (`power = 0,64` ở mức `+5` điểm) kèm cách kiểm soát.
-- **Điểm cần lưu ý / hoàn thiện tiếp:** Cần bổ sung email cá nhân và mã commit sau khi push; theo dõi mốc 1 và mốc 2 của Đức để đối chiếu lại số A3 trong `scope`, ghép phần D vào `src/lab13.py`, xoá `src/nhap_pilot.py` và đọc kỹ phần A, B, C, E của các thành viên trước giờ duyệt chéo Gate 2a (17:00).
+- **Điểm cần lưu ý / hoàn thiện tiếp:** Chờ nhóm trưởng merge các nhánh vào `main`, đọc kỹ phần A, B, C, E của các thành viên để chuẩn bị bảo vệ và duyệt chéo Gate 2a (17:00), sau đó tự nộp link repo nhóm trên LMS trước 23h59 GMT+7.
