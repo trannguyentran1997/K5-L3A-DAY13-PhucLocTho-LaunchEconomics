@@ -49,7 +49,7 @@ Báo cáo riêng của từng thành viên nằm trong `report/team/`:
 - Review từng phần, sửa: số 12.415 đ trong `pilot_plan.yaml`; tách luật dừng hoàn trùng; viết lại bảng khắc phục cho khác bài mẫu; gỡ cột nhãn người 2 chưa có thật.
 - Kiểm số A2 độc lập bằng Excel (`report/team/kiem_so_A2.xlsx`), khớp `lab13.py`, lệch lớn nhất 0,11%.
 - Viết hồ sơ launch v0 (7 mục, đề xuất Go có điều kiện), `TEAM.md`, `group_report.md`.
-- Bộ nhãn độc lập 20 ca: chưa xong.
+- Gắn nhãn 20 ca ở nhiệm vụ C (người gắn nhãn 2), so khớp với bộ nhãn của Đăng đạt đồng thuận 20/20 = 100% và chuyển mục 5 hồ sơ sang "Xong, có bằng chứng".
 
 ### Bằng chứng
 

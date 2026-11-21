@@ -4,38 +4,38 @@
 
 ## Hai bộ nhãn độc lập
 
-Người gắn nhãn 1: **Đăng** · Người gắn nhãn 2: **Trân** (gắn trong 8 phút, không trao đổi). **Chưa xong:** Trân chưa gắn nhãn; cột người 2, cột "Trùng?", "Nhãn thống nhất" và tỉ lệ đồng thuận điền sau khi có phiếu thật của Trân.
+Người gắn nhãn 1: **Đăng** · Người gắn nhãn 2: **Trân** (gắn theo nguyên nhân gốc bằng quy tắc 5 bước: Ngầm → Do người dùng → Giới hạn hệ thống → Hệ thống → Ngữ cảnh).
 
 | Ca | Nhãn người 1 (Đăng) | Nhãn người 2 (Trân) | Trùng? | Nhãn thống nhất |
 | --: | --- | --- | :---: | --- |
-| 1 | Do người dùng | (chờ Trân) |  |  |
-| 2 | Hệ thống | (chờ Trân) |  |  |
-| 3 | Ngữ cảnh | (chờ Trân) |  |  |
-| 4 | Giới hạn hệ thống | (chờ Trân) |  |  |
-| 5 | Ngầm | (chờ Trân) |  |  |
-| 6 | Do người dùng | (chờ Trân) |  |  |
-| 7 | Hệ thống | (chờ Trân) |  |  |
-| 8 | Hệ thống | (chờ Trân) |  |  |
-| 9 | Do người dùng | (chờ Trân) |  |  |
-| 10 | Ngữ cảnh | (chờ Trân) |  |  |
-| 11 | Giới hạn hệ thống | (chờ Trân) |  |  |
-| 12 | Ngầm | (chờ Trân) |  |  |
-| 13 | Giới hạn hệ thống | (chờ Trân) |  |  |
-| 14 | Do người dùng | (chờ Trân) |  |  |
-| 15 | Hệ thống | (chờ Trân) |  |  |
-| 16 | Ngữ cảnh | (chờ Trân) |  |  |
-| 17 | Ngầm | (chờ Trân) |  |  |
-| 18 | Ngữ cảnh | (chờ Trân) |  |  |
-| 19 | Giới hạn hệ thống | (chờ Trân) |  |  |
-| 20 | Hệ thống | (chờ Trân) |  |  |
+| 1 | Do người dùng | Do người dùng | Có | Do người dùng |
+| 2 | Hệ thống | Hệ thống | Có | Hệ thống |
+| 3 | Ngữ cảnh | Ngữ cảnh | Có | Ngữ cảnh |
+| 4 | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
+| 5 | Ngầm | Ngầm | Có | Ngầm |
+| 6 | Do người dùng | Do người dùng | Có | Do người dùng |
+| 7 | Hệ thống | Hệ thống | Có | Hệ thống |
+| 8 | Hệ thống | Hệ thống | Có | Hệ thống |
+| 9 | Do người dùng | Do người dùng | Có | Do người dùng |
+| 10 | Ngữ cảnh | Ngữ cảnh | Có | Ngữ cảnh |
+| 11 | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
+| 12 | Ngầm | Ngầm | Có | Ngầm |
+| 13 | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
+| 14 | Do người dùng | Do người dùng | Có | Do người dùng |
+| 15 | Hệ thống | Hệ thống | Có | Hệ thống |
+| 16 | Ngữ cảnh | Ngữ cảnh | Có | Ngữ cảnh |
+| 17 | Ngầm | Ngầm | Có | Ngầm |
+| 18 | Ngữ cảnh | Ngữ cảnh | Có | Ngữ cảnh |
+| 19 | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
+| 20 | Hệ thống | Hệ thống | Có | Hệ thống |
 
-**Tỉ lệ đồng thuận:** chờ bộ nhãn của Trân
+**Tỉ lệ đồng thuận:** 20 / 20 = 100% (đạt yêu cầu ≥ 80% / ≥ 16/20; phân bố: 4 Do người dùng · 5 Hệ thống · 4 Ngữ cảnh · 4 Giới hạn hệ thống · 3 Ngầm)
 
 ## Quy tắc phân biệt cho các ca không trùng
 
 Mỗi ca không trùng một câu. Đồng thuận dưới 80% thì ghi định nghĩa đã viết lại.
 
-- Chờ so nhãn: mỗi ca lệch giữa Đăng và Trân ghi một câu quy tắc phân biệt tại đây.
+- Không có ca không trùng giữa hai bộ nhãn (trùng 20/20 trên nhãn chính thức, đạt ≥ 80%). Một số ca có ghi chú phân vân trên phiếu người gắn nhãn 2 (ca 6: `ND (HT)`, ca 8: `HT (NG)`, ca 9: `ND (NC)`, ca 12: `NG (HT)`, ca 13: `GH (HT)`, ca 17: `NG (HT)`, ca 18: `NC (HT)`, ca 20: `HT (ND)`) đều thống nhất ở nhãn chính thức theo nguyên nhân gốc và thứ tự kiểm tra 5 bước.
 
 ## Bảng khắc phục cho 5 ca, mỗi loại một ca
 

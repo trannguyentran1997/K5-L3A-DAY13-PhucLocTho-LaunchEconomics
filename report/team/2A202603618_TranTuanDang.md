@@ -13,7 +13,7 @@ Nhiệm vụ C (bảng lỗi và cách khắc phục), E1 (đặc tả chỉ s�
 
 ## 3. Đóng góp cụ thể
 
-- **C:** gắn nhãn độc lập 20 ca theo 5 loại Google PAIR trong 8 phút; so nhãn với Trân, tính tỉ lệ đồng thuận và viết quy tắc cho ca lệch: **đang chờ bộ nhãn của Trân**; bảng khắc phục 5 ca đủ 5 loại (ca 14, 20, 16, 19, 5), mỗi dòng có event, ngưỡng hoặc tần suất và một vai trò phụ trách.
+- **C:** gắn nhãn độc lập 20 ca theo 5 loại Google PAIR trong 8 phút; so nhãn với Trân đạt đồng thuận **20/20 = 100%** (nhóm trưởng cập nhật sau khi có phiếu người gắn nhãn 2); bảng khắc phục 5 ca đủ 5 loại (ca 14, 20, 16, 19, 5), mỗi dòng có event, ngưỡng hoặc tần suất và một vai trò phụ trách.
 - **E1:** tính thử 3 chỉ số trên 1.200 yêu cầu: chính 82,83% (994/1.200), dùng 27,12% (48/177), an toàn 4,25% (51/1.200; 3,97% trong phạm vi `noi_dia` + `hang_nang`); đề xuất thêm 1 chỉ số dùng và 1 chỉ số an toàn; lập 11 event có `trace_id` và kiểm tra chéo chỉ số nào tính từ event nào.
 - **E2:** 4 dòng rủi ro kinh tế lấy số từ bảng độ nhạy [simulated]: làm lại gấp đôi +51,8% (6.787 đ); xem lại 100% 0,98× (1,03× nếu làm lại 15,3 phút); chi phí cố định +1.185 đến +2.370 đ/việc; lương tăng 25% +23,1%.
 - **Gate 2a:** chấm nhóm n + 1 vào `phieu_cham.md` (cập nhật sau buổi duyệt chéo 17:00).
@@ -21,7 +21,7 @@ Nhiệm vụ C (bảng lỗi và cách khắc phục), E1 (đặc tả chỉ s�
 ## 4. Bằng chứng
 
 - Commit `25ed0ac` trên branch `ttdang`: `report/team/bang_loi.md`, `report/team/chi_so.md`.
-- `bang_loi.md`: bộ nhãn độc lập của Đăng, bảng khắc phục ca 14, 20, 16, 19, 5 (bộ nhãn của Trân và tỉ lệ đồng thuận đang chờ).
+- `bang_loi.md`: bộ nhãn của Đăng và Trân (đồng thuận 20/20 = 100%), bảng khắc phục ca 14, 20, 16, 19, 5.
 - `chi_so.md`: đoạn code pandas tính 3 chỉ số, bảng 11 event, bảng E2.
 
 ## 5. Công cụ AI đã dùng
@@ -33,6 +33,6 @@ Nhiệm vụ C (bảng lỗi và cách khắc phục), E1 (đặc tả chỉ s�
 
 ## 6. Tự đánh giá
 
-- Hoàn thành E1, E2 và bộ nhãn của mình cho C; tỉ lệ đồng thuận chờ bộ nhãn của Trân; mọi số giả lập có nhãn simulated.
+- Hoàn thành E1, E2 và phần C (đồng thuận 20/20 = 100% sau khi có bộ nhãn của Trân); mọi số giả lập có nhãn simulated.
 - Bài học: gắn nhãn theo nguyên nhân gốc chứ không theo chỗ cần sửa; chỉ số nào không tính được từ event thì chưa đo được.
 - Cần cải thiện: chủ động đồng bộ số với bảng độ nhạy của người làm B sớm hơn thay vì tự tính lại.

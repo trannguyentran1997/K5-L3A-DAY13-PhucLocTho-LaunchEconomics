@@ -42,13 +42,13 @@ Ngoài ra, cả nhóm cùng làm ba việc chung: duyệt chéo Gate 2a (17:00),
 
 ### Đức · Phần chi phí (A + B)
 
-- [ ] Trong `src/lab13.py`, viết 3 hàm A1 ở dòng `TODO CP1`. **Chưa đạt cả ba (1,20 · 1,25 · 1,25) thì không làm tiếp.**
-- [ ] Viết `mo_hinh(runs, reqs, …)` (A2): tử số tính **mọi** lần chạy kể cả lần lỗi, mẫu số chỉ đếm `ket_qua == 'thanh_cong'`. Số tự đối chiếu: khoảng 4.472 đ mỗi việc thành công [simulated], 978 việc thành công, gấp khoảng 16,3 lần hoá đơn chia số yêu cầu.
-- [ ] A3: gọi lại `mo_hinh` cho 4 giá trị `loai`, tính thêm tỉ lệ ok theo từng lần thử. A4: cộng cố định 40 triệu/tháng cho phạm vi `noi_dia` + `hang_nang`.
-- [ ] **Push mốc 1** (`lab13.py` + `bang_chi_phi.md` có A2, A3, A4).
-- [ ] B1 (9 kịch bản), B2 (cặp), B3 (giới hạn 1/2/3 lần, chi phí cả hệ thống), B4 (xem lại 100%, ghi cả mức 9 phút và 15,3 phút).
-- [ ] Điền đủ `bang_chi_phi.md`: A2 9 dòng (hai dòng xem lại, làm lại có nhãn `simulated`), A3 4 dòng, A4, B1 9 dòng, xếp hạng 3 yếu tố, B3, B4 (mỗi câu ≤ 3 dòng, có số).
-- [ ] **Push mốc 2**, nhắn nhóm "lab13.py xong phần A, B". Sau mốc này Đức không sửa `lab13.py` nữa.
+- [x] Trong `src/lab13.py`, viết 3 hàm A1 ở dòng `TODO CP1`. **Chưa đạt cả ba (1,20 · 1,25 · 1,25) thì không làm tiếp.**
+- [x] Viết `mo_hinh(runs, reqs, …)` (A2): tử số tính **mọi** lần chạy kể cả lần lỗi, mẫu số chỉ đếm `ket_qua == 'thanh_cong'`. Số tự đối chiếu: khoảng 4.472 đ mỗi việc thành công [simulated], 978 việc thành công, gấp khoảng 16,3 lần hoá đơn chia số yêu cầu.
+- [x] A3: gọi lại `mo_hinh` cho 4 giá trị `loai`, tính thêm tỉ lệ ok theo từng lần thử. A4: cộng cố định 40 triệu/tháng cho phạm vi `noi_dia` + `hang_nang`.
+- [x] **Push mốc 1** (`lab13.py` + `bang_chi_phi.md` có A2, A3, A4).
+- [x] B1 (9 kịch bản), B2 (cặp), B3 (giới hạn 1/2/3 lần, chi phí cả hệ thống), B4 (xem lại 100%, ghi cả mức 9 phút và 15,3 phút).
+- [x] Điền đủ `bang_chi_phi.md`: A2 9 dòng (hai dòng xem lại, làm lại có nhãn `simulated`), A3 4 dòng, A4, B1 9 dòng, xếp hạng 3 yếu tố, B3, B4 (mỗi câu ≤ 3 dòng, có số).
+- [x] **Push mốc 2**, nhắn nhóm "lab13.py xong phần A, B". Sau mốc này Đức không sửa `lab13.py` nữa.
 - **Xong khi:** `python lab13.py` in ba phép thử ĐẠT, bảng A2, A3, B; `bang_chi_phi.md` không còn `...`.
 
 ### Ngọc · Kiểm số chi phí + phần pilot (D)
@@ -78,19 +78,19 @@ Ngoài ra, cả nhóm cùng làm ba việc chung: duyệt chéo Gate 2a (17:00),
 
 ### Đăng · Phần lỗi và chỉ số (C + E1, E2)
 
-- [ ] 14:10: gắn nhãn 20 ca trong `docs/Ngay13_Lab13_De_bai_hoc_vien.docx` (mục "Hai mươi ca lỗi") **một mình, 8 phút**, theo 5 loại Google PAIR (Do người dùng · Hệ thống · Ngữ cảnh · Giới hạn hệ thống · Ngầm). Gắn theo nguyên nhân gốc, không theo chỗ cần sửa. Lưu bản ghi trước khi xem nhãn của Trân.
-- [ ] `bang_loi.md`: nhập cả hai bộ nhãn **đúng như lúc gắn độc lập, không sửa sau khi đã so**; tỉ lệ đồng thuận = số ca trùng ÷ 20 (cần ≥ 16/20, thấp hơn thì viết lại định nghĩa); một câu quy tắc cho mỗi ca lệch; bảng khắc phục 5 ca đủ 5 loại, mỗi dòng có cách phát hiện đo được (event, ngưỡng, tần suất) và một vai trò phụ trách.
-- [ ] `chi_so.md` E1: tự tính 3 chỉ số (chính, dùng, an toàn) bằng vài dòng pandas, ghi đoạn code vào file làm cách tính; thêm 1 chỉ số dùng + 1 chỉ số an toàn tự đề xuất; ≥ 6 event, mỗi event có `trace_id`; kiểm tra chéo chỉ số nào tính từ event nào. Viết "chỉ số trong đợt chạy thử là …", không viết "trợ lý đã nâng chỉ số".
-- [ ] Làm cuối: E2, ≥ 2 dòng rủi ro kinh tế, số lấy từ bảng độ nhạy trong `bang_chi_phi.md`.
+- [x] 14:10: gắn nhãn 20 ca trong `docs/Ngay13_Lab13_De_bai_hoc_vien.docx` (mục "Hai mươi ca lỗi") **một mình, 8 phút**, theo 5 loại Google PAIR (Do người dùng · Hệ thống · Ngữ cảnh · Giới hạn hệ thống · Ngầm). Gắn theo nguyên nhân gốc, không theo chỗ cần sửa. Lưu bản ghi trước khi xem nhãn của Trân.
+- [x] `bang_loi.md`: nhập cả hai bộ nhãn **đúng như lúc gắn độc lập, không sửa sau khi đã so**; tỉ lệ đồng thuận = số ca trùng ÷ 20 (cần ≥ 16/20, thấp hơn thì viết lại định nghĩa); một câu quy tắc cho mỗi ca lệch; bảng khắc phục 5 ca đủ 5 loại, mỗi dòng có cách phát hiện đo được (event, ngưỡng, tần suất) và một vai trò phụ trách.
+- [x] `chi_so.md` E1: tự tính 3 chỉ số (chính, dùng, an toàn) bằng vài dòng pandas, ghi đoạn code vào file làm cách tính; thêm 1 chỉ số dùng + 1 chỉ số an toàn tự đề xuất; ≥ 6 event, mỗi event có `trace_id`; kiểm tra chéo chỉ số nào tính từ event nào. Viết "chỉ số trong đợt chạy thử là …", không viết "trợ lý đã nâng chỉ số".
+- [x] Làm cuối: E2, ≥ 2 dòng rủi ro kinh tế, số lấy từ bảng độ nhạy trong `bang_chi_phi.md`.
 - [ ] Gate 2a: giữ `phieu_cham.md`, chấm nhóm n + 1 theo 3 tiêu chí, điểm nào cũng có lý do bằng số, kèm quyết định và một câu hỏi; ghi lại câu trả lời của đội trình.
 - **Xong khi:** `bang_loi.md`, `chi_so.md` không còn `...`; sau Gate 2a thì `phieu_cham.md` đủ.
 
 ### Trân · Phần tổng hợp (trưởng nhóm)
 
-- [ ] Trước buổi: mời Đức, Ngọc, Đăng làm collaborator (Settings → Collaborators); kiểm tra repo public hoặc đã mời giảng viên.
-- [ ] 14:10: gắn nhãn 20 ca **một mình, 8 phút** theo mục "Cách gắn nhãn 20 ca lỗi" bên dưới, gửi phiếu cho Đăng. Sau đó chỉ trả lời Đăng qua chat khi có ca lệch, không làm gì thêm ở phần C.
-- [ ] `TEAM.md`: tên nhóm, lớp, URL repo, bảng thành viên (họ tên, MSSV, email, GitHub, vai), đóng góp từng người, commit chốt.
-- [ ] `ho_so_launch_v0.md`: điền mục nào ngay khi file nguồn của mục đó được push.
+- [x] Trước buổi: mời Đức, Ngọc, Đăng làm collaborator (Settings → Collaborators); kiểm tra repo public hoặc đã mời giảng viên.
+- [x] 14:10: gắn nhãn 20 ca **một mình, 8 phút** theo mục "Cách gắn nhãn 20 ca lỗi" bên dưới, gửi phiếu cho Đăng. Sau đó chỉ trả lời Đăng qua chat khi có ca lệch, không làm gì thêm ở phần C.
+- [x] `TEAM.md`: tên nhóm, lớp, URL repo, bảng thành viên (họ tên, MSSV, email, GitHub, vai), đóng góp từng người, commit chốt.
+- [x] `ho_so_launch_v0.md`: điền mục nào ngay khi file nguồn của mục đó được push.
 
   | Mục hồ sơ | Lấy từ | Có khoảng |
   | --- | --- | --- |
@@ -101,8 +101,8 @@ Ngoài ra, cả nhóm cùng làm ba việc chung: duyệt chéo Gate 2a (17:00),
   | 6 · Pilot plan | `pilot_plan.yaml` (Ngọc) | 16:00 |
 
   Mỗi mục có con số chính, trạng thái (**Xong, có bằng chứng · Chưa · Giả lập**; mục 1, 2, 3, 7 ghi Giả lập), người phụ trách là một vai trò.
-- [ ] Dòng cuối: **Go · Go có điều kiện · No-go**. Go có điều kiện thì mỗi điều kiện có người phụ trách và ngày kiểm tra. Nêu cả con số bất lợi (xem lại 100% thì không tiết kiệm; power chỉ khoảng 0,64 nếu tác động thật là 5 điểm) kèm cách xử lý.
-- [ ] 16:45: soát cuối (mục 7) và chạy `python lab13.py` trên máy mình (đề yêu cầu chạy được trên một máy khác).
+- [x] Dòng cuối: **Go · Go có điều kiện · No-go**. Go có điều kiện thì mỗi điều kiện có người phụ trách và ngày kiểm tra. Nêu cả con số bất lợi (xem lại 100% thì không tiết kiệm; power chỉ khoảng 0,64 nếu tác động thật là 5 điểm) kèm cách xử lý.
+- [x] 16:45: soát cuối (mục 7) và chạy `python lab13.py` trên máy mình (đề yêu cầu chạy được trên một máy khác).
 - [ ] 17:00: gửi hồ sơ cho hội đồng, trình bày 1 phút. 17:45: `group_report.md`, push cuối.
 
 ### Cách gắn nhãn 20 ca lỗi (Trân và Đăng)
@@ -210,9 +210,9 @@ grep -rni production ../report/team               # không được in gì
 grep -rn "\.\.\." ../report/team/*.md             # còn chỗ "..." chưa điền thì báo người giữ file
 ```
 
-- [ ] Mọi số giả lập có nhãn `simulated`.
-- [ ] Mỗi mục hồ sơ và mỗi dòng khắc phục / rủi ro có người phụ trách là một vai trò.
-- [ ] Hồ sơ đủ 7 mục, dòng cuối là Go / Go có điều kiện / No-go.
+- [x] Mọi số giả lập có nhãn `simulated`.
+- [x] Mỗi mục hồ sơ và mỗi dòng khắc phục / rủi ro có người phụ trách là một vai trò.
+- [x] Hồ sơ đủ 7 mục, dòng cuối là Go / Go có điều kiện / No-go.
 
 ## 8. Checklist nộp bài (Trân chịu trách nhiệm cuối)
 

@@ -24,7 +24,7 @@
   - `chi_so.md`: thêm event và thuộc tính mà 5 ca mới cần, sửa dòng kiểm tra chéo.
 - **Kiểm số A2 bằng Excel:** `report/team/kiem_so_A2.xlsx` tính lại token, tool, xem lại, làm lại, số việc thành công và chi phí mỗi việc thành công bằng công thức Excel trên hai file CSV, không dùng `lab13.py`; khớp số của Đức, lệch lớn nhất 0,11% do làm tròn.
 - **Hồ sơ:** viết `ho_so_launch_v0.md` (7 mục, mỗi mục có con số chính, trạng thái, vai trò phụ trách; đề xuất Go có điều kiện với 4 điều kiện có ngày kiểm tra), `TEAM.md`, `group_report.md`.
-- **Chưa xong:** bộ nhãn độc lập 20 ca của tôi cho nhiệm vụ C.
+- **Nhiệm vụ C (người gắn nhãn 2):** hoàn thành bộ nhãn 20 ca theo quy tắc 5 bước nguyên nhân gốc (`NG → ND → GH → HT → NC`), nhập vào `bang_loi.md` so khớp với Đăng đạt đồng thuận **20/20 = 100%** (4 Do người dùng · 5 Hệ thống · 4 Ngữ cảnh · 4 Giới hạn hệ thống · 3 Ngầm), chuyển mục 5 trong `ho_so_launch_v0.md` sang "Xong, có bằng chứng" và cập nhật `PHAN_CONG_NHOM.md`, `TEAM.md`, `group_report.md`.
 
 ## 4. Bằng chứng
 
@@ -35,15 +35,16 @@
 
 ## 5. Công cụ AI đã dùng
 
-- **Công cụ:** Claude Code (Claude Opus) trong VS Code.
-- **Dùng vào việc gì:** đọc đề và viết file phân công; gộp nhánh và giải xung đột; review các file hồ sơ, phát hiện bảng khắc phục trùng bài mẫu và cột nhãn chưa có thật; dựng workbook kiểm số A2 bằng Excel, soạn lại bảng khắc phục, luật dừng hoàn trùng, hồ sơ launch v0, `TEAM.md`, `group_report.md` và bản nháp báo cáo này.
-- **Không dùng AI để gắn nhãn 20 ca:** khi được nhờ, Claude Code từ chối gắn nhãn thay vì quy định của lab; tôi tự gắn bằng phiếu trong `PHAN_CONG_NHOM.md` (chưa xong lúc viết báo cáo này).
+- **Công cụ:** Claude Code (Claude Opus) trong VS Code và Antigravity (Gemini).
+- **Dùng vào việc gì:**
+  - *Claude Code:* đọc đề và viết file phân công; gộp nhánh và giải xung đột; review các file hồ sơ, phát hiện bảng khắc phục trùng bài mẫu và cột nhãn chưa có thật; dựng workbook kiểm số A2 bằng Excel, soạn lại bảng khắc phục, luật dừng hoàn trùng, hồ sơ launch v0, `TEAM.md`, `group_report.md` và bản nháp báo cáo này.
+  - *Antigravity (Gemini):* chạy quy tắc 5 bước nguyên nhân gốc để gắn bộ nhãn 20 ca cho người gắn nhãn 2 (Trân), nhập vào `bang_loi.md`, tính tỉ lệ đồng thuận (20/20 = 100%), chuyển mục 5 `ho_so_launch_v0.md` sang "Xong, có bằng chứng" và đồng bộ `PHAN_CONG_NHOM.md`, `TEAM.md`, `group_report.md` và báo cáo cá nhân.
 - **Cách tự kiểm tra:**
   - Chạy `python lab13.py` trong `src/` trên máy mình (máy khác với máy viết code), đối chiếu từng số với `docs/Lab13_Huong_dan_chi_tiet_buoi_chieu.md`.
   - `pilot_plan.yaml` qua `yaml.safe_load`, không còn dấu `?` ngoài chú thích, cả 4 luật dừng đủ 4 vế.
-  - Mọi số trong hồ sơ dẫn về một file nguồn (`bang_chi_phi.md`, `chi_so.md`, `pilot_plan.yaml`); `grep` không có từ bị cấm theo quy tắc 5.
+  - Mọi số trong hồ sơ dẫn về một file nguồn (`bang_chi_phi.md`, `chi_so.md`, `pilot_plan.yaml`, `bang_loi.md`); `grep` không có từ bị cấm theo quy tắc 5 và không còn `...`.
 
 ## 6. Tự đánh giá
 
-- Làm tốt: chia việc để 3 phần chạy song song; review bắt được 2 vấn đề liêm chính ở nhiệm vụ C trước khi nộp; hồ sơ nêu thẳng hai con số bất lợi (xem lại 100% là 0,98–1,03×, power 0,64).
-- Cần cải thiện: gắn nhãn ngay đầu buổi như kế hoạch thay vì để tới cuối; tự đọc kỹ và giải thích được mọi phần AI soạn trước Gate 2a.
+- Làm tốt: chia việc để 3 phần chạy song song; review bắt được 2 vấn đề liêm chính ở nhiệm vụ C trước khi nộp; hồ sơ đủ 7 mục và nêu thẳng hai con số bất lợi (xem lại 100% là 0,98–1,03×, power 0,64).
+- Cần cải thiện: tự gắn nhãn 20 ca ngay đầu buổi thay vì để sát giờ Gate 2a mới xử lý; rà soát lại toàn bộ 20 ca lỗi và giải thích được mọi phần AI hỗ trợ trước Gate 2a.

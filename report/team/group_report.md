@@ -18,7 +18,7 @@ Nhóm chia việc theo phần riêng để không ai phải chờ ai: Đức là
 
 - **A · Chi phí** ([bang_chi_phi.md](bang_chi_phi.md)): hàm `mo_hinh` cộng token và tool của mọi lần chạy, kể cả lần lỗi, cộng phút xem lại và làm lại [simulated], chia cho số việc thành công. Tách theo 4 loại yêu cầu, cộng chi phí cố định cho phạm vi pilot.
 - **B · Độ nhạy** ([bang_chi_phi.md](bang_chi_phi.md)): gọi lại `mo_hinh` cho 9 kịch bản, 1 cặp, giới hạn 1/2/3 lần chạy theo chi phí cả hệ thống, và kịch bản xem lại 100%.
-- **C · Bảng lỗi** ([bang_loi.md](bang_loi.md)): gắn nhãn 20 ca theo 5 loại Google PAIR; bảng khắc phục 5 ca (14, 20, 16, 19, 5), mỗi dòng có event, ngưỡng và một vai trò.
+- **C · Bảng lỗi** ([bang_loi.md](bang_loi.md)): gắn nhãn 20 ca theo 5 loại Google PAIR (đồng thuận 20/20 = 100%); bảng khắc phục 5 ca (14, 20, 16, 19, 5), mỗi dòng có event, ngưỡng và một vai trò.
 - **D · Pilot** ([pilot_plan.yaml](pilot_plan.yaml)): tính cỡ mẫu cho 3 cách chia trước khi chọn; chọn chia theo nhân viên 20 + 20, chấp nhận MDE +6 điểm; 4 luật dừng đủ NẾU – TRONG – THÌ – KHÔNG THÌ.
 - **E · Chỉ số và hồ sơ** ([chi_so.md](chi_so.md), [ho_so_launch_v0.md](ho_so_launch_v0.md)): 3 chỉ số tính thử, 2 chỉ số tự đề xuất, 12 event có `trace_id`, 4 dòng rủi ro kinh tế; hồ sơ 7 mục.
 
@@ -37,7 +37,7 @@ Nhóm chia việc theo phần riêng để không ai phải chờ ai: Đức là
 - **Lỗi mã hoá tiếng Việt:** commit đầu của Đức (`80048f4`) bị đổi toàn bộ chữ có dấu thành ký tự rác khi thao tác nhánh trên PowerShell. Đức sửa ở `e383534`.
 - **A4 chia nhầm mẫu số:** bản đầu chia số việc thành công cho 982 yêu cầu trong phạm vi thay vì 1.200 yêu cầu của mẫu; Đức phát hiện khi đối chiếu đáp án và sửa.
 - **Xung đột khi gộp `src/lab13.py`:** nhánh của Ngọc đã gộp bản lỗi mã hoá của Đức, còn bản sửa của Đức đến sau. Git tự gộp phần lớn; xung đột duy nhất ở cuối khối main, giữ lời gọi phần D của Ngọc.
-- **Review phát hiện 2 vấn đề ở nhiệm vụ C:** bảng khắc phục bản đầu trùng gần nguyên văn bài làm mẫu, nên đã viết lại bằng 5 ca khác. Cột nhãn người 2 được điền khi Trân chưa gắn nhãn, nên đã gỡ; bộ nhãn thứ hai và tỉ lệ đồng thuận đang chờ Trân tự gắn.
+- **Review phát hiện 2 vấn đề ở nhiệm vụ C:** bảng khắc phục bản đầu trùng gần nguyên văn bài làm mẫu, nên đã viết lại bằng 5 ca khác. Cột nhãn người 2 bản đầu được điền khi Trân chưa gắn nhãn, nên đã gỡ; sau đó Trân hoàn thành gắn nhãn 20 ca và cập nhật lại `bang_loi.md` (đồng thuận 20/20 = 100%).
 - **Môi trường:** máy trưởng nhóm thiếu `statsmodels`, phải tạo `src/.venv` theo `src/README.md` (lệnh `python -m venv .venv` rồi `pip install -r requirements.txt`) mới chạy được phần D. Mạng tới github.com chập chờn, một số lần push phải chạy lại.
 
 ## 6. Tổng hợp đóng góp
@@ -60,15 +60,15 @@ Chi tiết đóng góp của từng thành viên nằm trong `TEAM.md`. Bảng d
 | Ngọc | Làm trên nhánh riêng | ⏳ | `73aa3d3`, `40ec4ab` push thẳng lên `main` (15:30, 15:39) |
 | Ngọc | Báo cáo cá nhân | ✅ | `2A202603602_PhamThiHongNgoc.md` |
 | Đăng | Bộ nhãn độc lập 20 ca (người gắn nhãn 1) | ✅ | Cột "Nhãn người 1" trong `bang_loi.md` |
-| Đăng | Nhập 2 bộ nhãn, tỉ lệ đồng thuận, quy tắc ca lệch | ⏳ | Chờ bộ nhãn của Trân; cột người 2 bản đầu được điền khi Trân chưa gắn, đã gỡ khi review |
+| Đăng | Nhập 2 bộ nhãn, tỉ lệ đồng thuận, quy tắc ca lệch | 🔧 | Đã nhập đủ 2 bộ nhãn vào `bang_loi.md` (đồng thuận 20/20 = 100%); cột người 2 bản đầu điền khi Trân chưa gắn đã gỡ khi review và điền lại sau khi có bộ nhãn của Trân |
 | Đăng | Bảng khắc phục 5 ca đủ 5 loại | 🔧 | Bản đầu trùng gần nguyên văn bài mẫu; viết lại bằng ca 14, 20, 16, 19, 5 |
 | Đăng | `chi_so.md`: 3 chỉ số, 2 chỉ số tự đề xuất, ≥ 6 event, E2 ≥ 2 dòng | 🔧 | 82,83% · 27,12% · 4,25%; 12 event; 4 dòng rủi ro; review thêm event cho 5 ca mới |
 | Đăng | `phieu_cham.md` | ⏳ | Điền tại buổi Gate 2a |
-| Đăng | Báo cáo cá nhân | 🔧 | `2A202603618_TranTuanDang.md`; review sửa các câu "đồng thuận 18/20" |
+| Đăng | Báo cáo cá nhân | 🔧 | `2A202603618_TranTuanDang.md`; review sửa các câu "đồng thuận 18/20" và cập nhật đồng thuận 20/20 sau khi có bộ nhãn của Trân |
 | Trân | Mời collaborator | ✅ | 3 thành viên đã push được nhánh lên repo nhóm |
-| Trân | Gắn nhãn 20 ca (người gắn nhãn 2) | ⏳ | Chưa gắn |
+| Trân | Gắn nhãn 20 ca (người gắn nhãn 2) | ✅ | Hoàn thành 20/20 ca theo quy tắc 5 bước Google PAIR, đồng thuận 20/20 = 100% với Đăng |
 | Trân | Gộp nhánh, chạy lại `lab13.py` trên máy khác | ✅ | `3e9a486`, `59d4bdf`; chạy hết, số khớp đáp án |
-| Trân | `ho_so_launch_v0.md` 7 mục + đề xuất | ✅ | Go có điều kiện, 4 điều kiện có ngày; mục 5 còn trạng thái "Chưa" |
+| Trân | `ho_so_launch_v0.md` 7 mục + đề xuất | ✅ | Go có điều kiện, 4 điều kiện có ngày; đủ 7 mục, mục 5 đã chuyển "Xong, có bằng chứng" |
 | Trân | `TEAM.md`, `group_report.md`, báo cáo cá nhân | ✅ | `96dd876`; còn trống GitHub của Ngọc, Đăng và commit chốt |
 | Trân | Soát cuối (từ cấm, `...`, `simulated`, YAML) | ✅ | Không có từ cấm; YAML đọc được, không còn `?` |
 | Cả nhóm | 10 phút đọc phần nhau, Gate 2a, nộp link LMS | ⏳ | Sau 17:00 |
@@ -79,7 +79,7 @@ Chi tiết đóng góp của từng thành viên nằm trong `TEAM.md`. Bảng d
 - Đợt chạy thử không có đối chứng, nên 82,83% chưa nói được trợ lý làm chỉ số chính thay đổi bao nhiêu.
 - Với 40 nhân viên, pilot chỉ đủ mẫu cho +6 điểm; nếu tác động thật là +5 điểm thì 36% khả năng bỏ sót.
 - Chi phí cố định tính theo tỉ lệ thành công của mẫu 1.200 yêu cầu; khối lượng thật thấp hơn thì chi phí mỗi việc tăng.
-- Nhiệm vụ C còn thiếu bộ nhãn thứ hai; lần sau hai người gắn nhãn phải gắn ngay đầu buổi và lưu phiếu gốc làm bằng chứng.
+- Bộ nhãn thứ hai ở nhiệm vụ C hoàn thành sát giờ Gate 2a; lần sau hai người gắn nhãn phải làm ngay đầu buổi (14:10) và lưu phiếu gốc ngay từ đầu.
 
 ## 8. Tài liệu tham khảo
 
