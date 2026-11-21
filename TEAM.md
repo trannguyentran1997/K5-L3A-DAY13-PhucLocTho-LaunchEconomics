@@ -63,7 +63,7 @@ Báo cáo của nhóm: `report/team/2A202603603_NguyenTranTuTran.md`, `report/te
 - Hồ sơ launch v0: 7 mục, mỗi mục có con số chính, trạng thái, một vai trò phụ trách; đề xuất Go có điều kiện cho pilot `noi_dia` + `hang_nang` với 4 điều kiện có người phụ trách và ngày kiểm tra; nêu 2 con số bất lợi (xem lại 100% là 0,98–1,03×; power 0,64 ở mức +5 điểm).
 - `TEAM.md`, `group_report.md` (có bảng đối chiếu phân công), báo cáo cá nhân.
 - Soát cuối: không có từ bị cấm, mọi số giả lập có nhãn `simulated`, `pilot_plan.yaml` đọc được và không còn dấu `?`.
-- Soạn và chốt `phieu_cham.md` chấm nhóm TENGICUNGDUOC (commit `1da04c2` của họ): 30/30, điểm từng tiêu chí có lý do bằng số, quyết định Go có điều kiện, một câu hỏi về luật dừng chi phí.
+- Chấm C6 và tổng hợp phiếu chấm nhóm TENGICUNGDUOC (thay phần của Đăng) vào `report/team/phieu_cham_TENGICUNGDUOC.md`: 25/30 (C6 10, C7 5, C8 10), quyết định Go có điều kiện, một câu hỏi về luật dừng chi phí; trả `phieu_cham.md` về nội dung mẫu ban đầu.
 - Ghi commit chốt `a878e07` vào `TEAM.md` và push lên `main`.
 - Chưa xong: gửi hồ sơ và trình bày 1 phút ở Gate 2a; ghi câu trả lời của đội trình và kết quả nhóm mình nhận được.
 
@@ -95,6 +95,7 @@ Báo cáo của nhóm: `report/team/2A202603603_NguyenTranTuTran.md`, `report/te
 - B1–B4: 9 kịch bản độ nhạy; cặp token × 2 + xem lại × 2 = 6.543 đ (+46,3%) và xếp hạng 3 yếu tố (làm lại · xem lại · lương); giới hạn 2 lần chạy rẻ nhất cho cả hệ thống (6.901.220 đ); xem lại 100% là 11.743 đ = 0,98× và 12.415 đ = 1,03×, hoà vốn ≤ 5,1 và ≤ 4,8 phút [simulated].
 - Điền đủ `bang_chi_phi.md`, mọi số từ cột `_simulated` có nhãn.
 - Báo cáo cá nhân.
+- Duyệt chéo nhóm TENGICUNGDUOC: kiểm phần A, B của họ (C1, C2 khớp đáp án, 35/35) và nhãn simulated cho tiêu chí C7; chỉ ra luật dừng chi phí gộp 40 triệu cố định sẽ kích hoạt ở bước 0.10 và 0.25 (khoảng 15.266 đ và 8.155 đ/việc); xem mục 7 báo cáo cá nhân.
 - Ghi chú quy trình: không tách 2 mốc push như phân công mà push một lần lúc 15:38; sửa tiếp `lab13.py` lúc 15:49 (lỗi mã hoá tiếng Việt, A4) sau khi Ngọc đã ghép phần D, gây một xung đột khi gộp, trưởng nhóm đã giải.
 
 ### Bằng chứng
@@ -118,6 +119,7 @@ Báo cáo của nhóm: `report/team/2A202603603_NguyenTranTuTran.md`, `report/te
 - `pilot_plan.yaml`: đủ mọi trường; D1, D2 và đánh đổi trong chú thích; chia theo nhân viên 20 + 20 phân tầng theo depot; `scope` lấy số A3; luật dừng đủ 4 vế; qua 2 lệnh tự kiểm. Khi review: đổi 12.414 thành 12.415, thêm luật dừng hoàn trùng thứ 4, chỉnh luật an toàn và luật chi phí để không báo nhầm ở bước 4 nhân viên.
 - Ghép phần D vào `src/lab13.py`, chạy hết không lỗi, xoá `src/nhap_pilot.py`.
 - Báo cáo cá nhân.
+- Duyệt chéo nhóm TENGICUNGDUOC: chấm C8 = 10 (20 + 20 nhân viên, đủ 20 cụm, D1 đúng, luật dừng đủ 4 vế), kiến nghị sửa luật dừng chi phí và luật hoàn trùng; phát hiện dòng `scope` thiếu nhãn simulated cho 22.515 đ và 10.215 đ (căn cứ hạ C7 xuống 5) (commit `53acc35`).
 - Kiểm số A2 bằng Excel: việc thêm vào phân công sau khi Ngọc đã làm xong phần D; Trân làm thay khi review.
 - Ghi chú quy trình: 2 commit đầu (`73aa3d3`, `40ec4ab`) push thẳng lên `main` thay vì nhánh riêng; không ảnh hưởng nội dung.
 
@@ -141,7 +143,7 @@ Báo cáo của nhóm: `report/team/2A202603603_NguyenTranTuTran.md`, `report/te
 - Danh sách 11 event có `trace_id` và kiểm tra chéo chỉ số nào tính từ event nào (review thêm 1 event cho bảng khắc phục mới, thành 12).
 - E2: 4 dòng rủi ro kinh tế lấy số từ bảng độ nhạy (làm lại gấp đôi, xem lại 100%, khối lượng thấp, lương tăng) [simulated].
 - Báo cáo cá nhân (review sửa các câu về đồng thuận).
-- `phieu_cham.md` (chấm nhóm TENGICUNGDUOC): Trân soạn và chốt điểm 30/30 từ bằng chứng trong repo của họ; câu trả lời của đội trình ghi sau phần hỏi đáp.
+- Phiếu chấm nhóm TENGICUNGDUOC (`report/team/phieu_cham_TENGICUNGDUOC.md`): phần tổng hợp của Đăng do Trân làm thay; tổng 25/30, câu trả lời của đội trình ghi sau phần hỏi đáp.
 
 ### Bằng chứng
 

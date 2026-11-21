@@ -30,7 +30,7 @@ Nhóm chia việc theo phần riêng để không ai phải chờ ai: Đức là
 - Chỉ số trong đợt chạy thử: chính 82,83%, bỏ qua gợi ý 27,12%, mở lại 7 ngày 4,25%.
 - Pilot: 20 + 20 nhân viên, n = 859/nhóm, m ≥ 299; power chỉ 0,64 nếu tác động thật là +5 điểm.
 - **Đề xuất: Go có điều kiện** cho pilot `noi_dia` + `hang_nang`, với 4 điều kiện có người phụ trách và ngày kiểm tra (xem hồ sơ).
-- Nhóm mình chấm nhóm TENGICUNGDUOC: 30/30, quyết định Go có điều kiện, 1 câu hỏi về luật dừng chi phí ([phieu_cham.md](phieu_cham.md)).
+- Nhóm mình chấm nhóm TENGICUNGDUOC: 25/30 (C6 10, C7 5 vì dòng `scope` thiếu nhãn simulated cho 2 số, C8 10), quyết định Go có điều kiện, 1 câu hỏi về luật dừng chi phí ([phieu_cham_TENGICUNGDUOC.md](phieu_cham_TENGICUNGDUOC.md)).
 - Kết quả duyệt chéo Gate 2a nhóm nhận được: chờ phiếu của nhóm hội đồng.
 
 ## 5. Khó khăn và cách xử lý
@@ -48,7 +48,7 @@ Chi tiết từng việc, trạng thái và commit của mỗi thành viên nằ
 
 | Người | Phần | Kết quả chính |
 | --- | --- | --- |
-| Trân | Tổng hợp, gắn nhãn 2, kiểm số A2, phiếu chấm | Gộp và review 3 nhánh; `kiem_so_A2.xlsx` khớp `lab13.py` (lệch lớn nhất 0,11%); nhãn 20/20; hồ sơ 7 mục; phiếu chấm TENGICUNGDUOC 30/30 |
+| Trân | Tổng hợp, gắn nhãn 2, kiểm số A2, phiếu chấm | Gộp và review 3 nhánh; `kiem_so_A2.xlsx` khớp `lab13.py` (lệch lớn nhất 0,11%); nhãn 20/20; hồ sơ 7 mục; phiếu chấm TENGICUNGDUOC 25/30 |
 | Đức | A + B | Qua 3 phép thử A1; 4.472 đ, gấp 16,3 lần [simulated]; B1–B4 khớp đáp án |
 | Ngọc | D | Năm câu D1, power 0,64; `pilot_plan.yaml` chia 20 + 20 nhân viên |
 | Đăng | C, E1, E2 | Bộ nhãn người 1; 3 chỉ số; 12 event có `trace_id`; 4 dòng rủi ro kinh tế |
