@@ -13,7 +13,7 @@
 #   1. Đối chứng chạy cùng thời gian: Có — 20 nhân viên đối chứng làm việc cùng khung tuần và cùng 12 depot với 20 nhân viên dùng trợ lý.
 #   2. Chia ngẫu nhiên hay do người chọn: Chia ngẫu nhiên bằng code với seed cố định công bố trước, phân tầng theo 12 depot.
 #   3. Ảnh hưởng gián tiếp và cách giảm: Có rủi ro nhân viên cùng depot trao đổi câu trả lời; giảm bằng phân quyền theo tài khoản staff_id, ẩn giao diện trợ lý với nhóm đối chứng và log lượt truy cập theo staff_id.
-#   4. Chỉ số chính, ngưỡng, ngày quyết định đã viết trước: Có — toàn bộ chỉ số chính, MDE 0,06, 3 luật dừng và ngày quyết định 2027-01-05 được chốt trước ngày bắt đầu pilot.
+#   4. Chỉ số chính, ngưỡng, ngày quyết định đã viết trước: Có — toàn bộ chỉ số chính, MDE 0,06, 4 luật dừng và ngày quyết định 2027-01-05 được chốt trước ngày bắt đầu pilot.
 #   5. Ít nhất 20 cụm mỗi nhóm: Có — đúng 20 nhân viên mỗi nhóm (đạt ngưỡng tối thiểu 20 cụm/nhóm).
 #
 # Đánh đổi đã chấp nhận (nếu cách chia chưa đạt cả hai điều kiện):
@@ -24,7 +24,7 @@
 # Tỉ lệ mo_lai_trong_7_ngay hiện tại và ngưỡng an toàn đã chọn:
 #   Toàn mẫu đợt chạy thử: 4,25% (51/1.200); trong phạm vi noi_dia + hang_nang: 3,97% (39/982).
 #   Nếu đặt ngưỡng dừng tuyệt đối thấp hơn mức hiện tại (ví dụ 3%) thì pilot sẽ bị dừng ngay tuần đầu.
-#   Do đó đặt ngưỡng so với nhóm đối chứng (cao hơn >= 2 điểm phần trăm) kết hợp trần tuyệt đối > 6% và 0 ca hoàn tiền trùng trong 3 ngày liên tiếp.
+#   Do đó đặt ngưỡng so với nhóm đối chứng (cao hơn >= 2 điểm phần trăm) kết hợp trần tuyệt đối > 6%; riêng hoàn tiền trùng là sai tiền thật nên tách thành luật dừng riêng, chỉ cần 1 ca là dừng ngay trong ngày.
 
 pilot:
   owner: "Giám đốc vận hành LogiX-VN"
@@ -46,14 +46,15 @@ pilot:
   identifiability:
     concurrent_control: "Có — 20 nhân viên đối chứng xử lý đồng thời trong cùng tuần và cùng 12 depot với 20 nhân viên nhóm dùng trợ lý"
     spillover_risk: "Trung bình (nguy cơ chia sẻ câu trả lời trong cùng depot) — giảm bằng phân quyền theo staff_id, ẩn trợ lý khỏi tài khoản đối chứng và log truy cập theo staff_id"
-    predeclared: "Có — chỉ số chính, MDE 0,06 (nêu rõ power 0,64 ở mức 0,05), 3 luật dừng và ngày quyết định 2027-01-05 được chốt trước khi chạy pilot"
+    predeclared: "Có — chỉ số chính, MDE 0,06 (nêu rõ power 0,64 ở mức 0,05), 4 luật dừng và ngày quyết định 2027-01-05 được chốt trước khi chạy pilot"
   stop_rules:
-    - "NẾU tỉ lệ mo_lai_trong_7_ngay của nhóm trợ lý cao hơn nhóm đối chứng >= 2 điểm phần trăm hoặc vượt 6% (so với mức hiện tại 3,97% trong phạm vi), hoặc phát sinh >= 1 ca hoàn tiền trùng TRONG 3 ngày liên tiếp THÌ Giám đốc vận hành LogiX-VN tắt trợ lý trong vòng 30 phút và chuyển sang luồng nhân viên tự làm KHÔNG THÌ không được chuyển sang bước rollout tiếp theo"
+    - "NẾU tỉ lệ mo_lai_trong_7_ngay của nhóm trợ lý cao hơn nhóm đối chứng >= 2 điểm phần trăm hoặc vượt 6% (so với mức hiện tại 3,97% trong phạm vi) TRONG 3 ngày liên tiếp THÌ Giám đốc vận hành LogiX-VN tắt trợ lý trong vòng 30 phút và chuyển sang luồng nhân viên tự làm KHÔNG THÌ không được chuyển sang bước rollout tiếp theo"
     - "NẾU chi phí mỗi việc thành công đo thật > 8.000 đ (vượt 0,67× mức 12.000 đ) hoặc tỉ lệ xem lại duy trì > 50% (gần ngưỡng hoà vốn 11.743–12.415 đ khi xem lại 100% [simulated]) TRONG 2 tuần liên tiếp THÌ PM trợ lý hoàn phí thu hẹp phạm vi về chỉ noi_dia và giới hạn tối đa 2 lần chạy KHÔNG THÌ không được mở rộng nhóm hang_nang"
     - "NẾU tỉ lệ bỏ qua gợi ý (sua + bo trên số được xem lại) > 40% (so với 27,12% ở đợt chạy thử) hoặc tỉ lệ nhân viên nhóm trợ lý sử dụng công cụ < 50% TRONG 1 tuần liên tiếp THÌ Trưởng nhóm CSKH phỏng vấn ít nhất 5 nhân viên trong vòng 3 ngày và điều chỉnh gợi ý KHÔNG THÌ không được tăng tỉ lệ rollout sang bước kế tiếp"
+    - "NẾU phát sinh >= 1 ca hoàn tiền trùng (2 bản ghi refund_ledger_write thành công cho cùng một mã đơn) TRONG bất kỳ 24 giờ nào THÌ Giám đốc vận hành LogiX-VN tắt trợ lý trong vòng 30 phút và Kế toán trưởng thu hồi khoản hoàn thừa trong 2 ngày làm việc KHÔNG THÌ không được bật lại trợ lý trước khi Kỹ sư trưởng agent sửa xong khoá chống trùng (ca 20) và đối soát sổ cái (ca 7)"
   interim_looks: "chỉ kiểm tra chỉ số an toàn hằng ngày và cuối mỗi tuần; không kiểm định sớm chỉ số chính trước ngày quyết định"
   rollback: "Giám đốc vận hành LogiX-VN bấm cờ tắt trợ lý, hiệu lực trong 30 phút; toàn bộ yêu cầu được chuyển ngay về luồng nhân viên CSKH tự xử lý không gián đoạn"
-  decision_date: "2027-01-05"     # sau 4 tuần rollout (1 tuần 0.10 + 1 tuần 0.25 + 2 tuần 0.50) + 7 ngày đóng cửa sổ mo_lai_trong_7_ngay
+  decision_date: "2027-01-05"     # bắt đầu 2026-12-01; sau 4 tuần rollout (1 tuần 0.10 + 1 tuần 0.25 + 2 tuần 0.50) + 7 ngày đóng cửa sổ mo_lai_trong_7_ngay
   simulated_inputs:
     - "chi_phi_moi_viec_thanh_cong_noi_dia: 2.696 đ = 0,22× mức 12.000 đ (tính từ phut_xem_lai_simulated và phut_lam_lai_simulated) [simulated]"
     - "chi_phi_moi_viec_thanh_cong_hang_nang: 8.221 đ = 0,69× mức 12.000 đ (tính từ phut_xem_lai_simulated và phut_lam_lai_simulated) [simulated]"

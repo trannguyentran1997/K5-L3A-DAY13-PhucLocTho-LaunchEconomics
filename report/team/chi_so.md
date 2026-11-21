@@ -37,11 +37,12 @@ an_toan_pham_vi = pham_vi.mo_lai_trong_7_ngay.mean()                            
 | agent_suggestion_shown | Giao diện nhân viên | staff_id, so_tien_de_xuat, trace_id | Khi gợi ý hiện cho nhân viên |
 | staff_review_decision | Nhân viên | staff_id, quyet_dinh (giu/sua/bo), phut_xem_lai đo thật, trace_id | Khi nhân viên bấm gửi/sửa/bỏ |
 | staff_rework_completed | Nhân viên | staff_id, phut_lam_lai đo thật, ly_do, trace_id | Khi làm lại xong |
-| handoff_to_staff | Agent | reason (thieu_du_lieu/ngoai_pham_vi/het_lan_chay), tom_tat, trace_id | Khi chuyển nhân viên |
+| handoff_to_staff | Agent | reason (thieu_du_lieu/ngoai_pham_vi/qua_han_du_lieu/het_lan_chay), tom_tat, trace_id | Khi chuyển nhân viên |
 | refund_ledger_write | Dịch vụ sổ cái | idempotency_key, so_tien, ket_qua, trace_id | Khi ghi sổ hoàn tiền |
-| ticket_closed | Hệ thống ticket | closed_at, trace_id | Khi đóng yêu cầu |
+| ticket_closed | Hệ thống ticket | closed_at, closed_by (khach_xac_nhan/he_thong/nhan_vien), trace_id | Khi đóng yêu cầu |
+| customer_notification_sent | Dịch vụ thông báo | kenh (zalo/sms/app), sent_at, loai_tin, trace_id | Khi gửi tin cho khách |
 | ticket_reopened | Khách | reopened_at, reason, trace_id | Khi khách mở lại |
-| audit_sample_checked | Kế toán | so_tien_da_hoan, so_tien_dung, phien_ban_bang_gia, trace_id | Hằng tuần, 100 đơn |
+| audit_sample_checked | Kế toán | so_tien_da_hoan, so_tien_dung, phien_ban_bang_gia, co_ma_giam_gia, trace_id | Hằng tuần, 100 đơn |
 
 **Kiểm tra chéo:** với mỗi chỉ số ở bảng E1, ghi event dùng để tính. Chỉ số nào không tính được từ danh sách event thì chưa đo được.
 
@@ -50,7 +51,7 @@ an_toan_pham_vi = pham_vi.mo_lai_trong_7_ngay.mean()                            
 - An toàn (lỗi lọt đến khách): `ticket_reopened` trong 7 ngày sau `ticket_closed`, chia số `refund_request_created`.
 - Dùng (tự đề xuất): `agent_suggestion_shown` chia `refund_request_created` có arm = tro_ly.
 - An toàn (tự đề xuất): `audit_sample_checked` có so_tien_da_hoan ≠ so_tien_dung, chia số đơn được kiểm tra.
-- Bảng khắc phục trong `bang_loi.md` dùng `input_validation_failed` (ca 9), `refund_ledger_write` (ca 7), `ticket_reopened` (ca 18), `handoff_to_staff` (ca 4), `audit_sample_checked` (ca 17); cả năm event đều có trong danh sách trên.
+- Bảng khắc phục trong `bang_loi.md` dùng `ticket_closed` + `refund_ledger_write` + `ticket_reopened` (ca 14), `refund_ledger_write` (ca 20), `customer_notification_sent` + `ticket_reopened` (ca 16), `handoff_to_staff` (ca 19), `audit_sample_checked` (ca 5); mọi event đều có trong danh sách trên.
 - Cả năm chỉ số đều tính được từ danh sách event trên. Chi phí mỗi việc thành công cũng tính được từ `agent_run_completed` cộng phút trong `staff_review_decision` và `staff_rework_completed`.
 
 ## E2 · Rủi ro kinh tế

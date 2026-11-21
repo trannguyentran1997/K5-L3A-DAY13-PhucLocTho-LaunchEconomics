@@ -36,10 +36,6 @@ Người gắn nhãn 1: **Đăng** · Người gắn nhãn 2: **Trân** (gắn t
 Mỗi ca không trùng một câu. Đồng thuận dưới 80% thì ghi định nghĩa đã viết lại.
 
 - Chờ so nhãn: mỗi ca lệch giữa Đăng và Trân ghi một câu quy tắc phân biệt tại đây.
-- **Quy tắc phân biệt bổ sung cho các ca dễ lẫn:**
-  - *Ca 8, 15 là Hệ thống, không phải Ngầm:* Sai sót đã lộ diện rõ ràng (dẫn sai điều khoản văn bản hoặc bị nhân viên review phát hiện trước khi gửi).
-  - *Ca 13 là Giới hạn hệ thống:* Yêu cầu nằm ngoài phạm vi dịch vụ của LogiX-VN thì bản chất là giới hạn nghiệp vụ, bất kể trợ lý trả lời chung chung hay từ chối thẳng.
-  - *Ca 12 là Ngầm:* Kết quả nghiệp vụ vẫn trả về đúng nhưng phát sinh bất thường âm thầm về chi phí token gấp 3 lần suốt 3 tuần mà không có cảnh báo hệ thống nào kích hoạt.
 
 ## Bảng khắc phục cho 5 ca, mỗi loại một ca
 
@@ -47,8 +43,8 @@ Cách phát hiện phải đo được (event, ngưỡng, tần suất). Ngườ
 
 | Ca | Loại lỗi | Phát hiện bằng gì | Khắc phục thế nào | Ai phụ trách |
 | --: | --- | --- | --- | --- |
-| 9 | Do người dùng | Event `input_validation_failed`; cảnh báo kích hoạt khi tỷ lệ vượt quá 2% số yêu cầu/ngày | Tự động nhận diện mã sàn TMĐT và tra cứu sang mã vận đơn tương ứng; nếu không tra cứu được thì hiển thị hướng dẫn kèm hình ảnh minh hoạ vị trí mã vận đơn | PM trợ lý hoàn phí |
-| 7 | Hệ thống | Đối soát tự động mỗi giờ: tin nhắn "đã hoàn" nhưng không có bản ghi sổ cái trạng thái ok cùng `trace_id`; ngưỡng cảnh báo: 0 ca | Chỉ gửi thông báo "đã hoàn" khi sổ cái xác nhận ok; nếu gặp lỗi 503 sau 3 lần retry thì thông báo "đang xử lý" và chuyển ticket sang luồng nhân viên | Kỹ sư trưởng agent |
-| 18 | Ngữ cảnh | Báo cáo tuần: tỷ lệ mở lại yêu cầu vì thắc mắc số tiền hoàn mà qua hậu kiểm xác nhận đã tính đúng chính sách | Cập nhật template tin nhắn phản hồi luôn ghi rõ công thức tính chi tiết (Ví dụ: "Phí giao 30.000 đ × 50% = 15.000 đ") | Trưởng nhóm CSKH |
-| 4 | Giới hạn hệ thống | Event `handoff_to_staff` với lý do `reason = thieu_du_lieu`, tổng hợp theo từng phân loại yêu cầu | Duy trì luồng bàn giao kèm tóm tắt ngữ cảnh cho nhân viên; chính thức loại phân loại yêu cầu `quoc_te` ra khỏi phạm vi triển khai pilot | PM trợ lý hoàn phí |
-| 17 | Ngầm | Kiểm toán mẫu ngẫu nhiên 100 đơn hoàn/tuần đối chiếu với bảng giá hiện hành; ngưỡng cảnh báo: tỷ lệ đơn lệch tiền > 1% | Thiết lập cơ chế tự động xoá cache bảng giá ngay khi phát hành bản giá mới, đồng thời ghi log phiên bản bảng giá vào trace của từng lượt xử lý | Kế toán trưởng |
+| 14 | Do người dùng | `ticket_closed` có `closed_by = khach_xac_nhan` mà trong 24 giờ không có `refund_ledger_write` thành công cùng `trace_id`, hoặc có `ticket_reopened` với `reason = chua_nhan_tien`; đếm hằng ngày, cảnh báo khi > 0,5% số yêu cầu do khách tự đóng | Chỉ hiện nút "Xác nhận đã nhận tiền" sau khi sổ cái ghi hoàn thành công; thêm bước xác nhận lần hai có ghi số tiền; cho khách mở lại trong 7 ngày bằng một chạm | PM ứng dụng khách hàng |
+| 20 | Hệ thống | Đối soát mỗi giờ trên `refund_ledger_write`: đếm mã đơn có từ 2 bản ghi thành công; ngưỡng 0 ca, có 1 ca là kích luật dừng hoàn trùng trong `pilot_plan.yaml` | Sinh `idempotency_key` từ mã đơn + loại hoàn; yêu cầu gửi lại khi lệnh trước đang xử lý chỉ trả trạng thái "đang xử lý", không tạo lệnh hoàn mới | Kỹ sư trưởng agent |
+| 16 | Ngữ cảnh | `customer_notification_sent` có `sent_at` trong khung 22:00–7:00, đếm theo tuần; kèm số `ticket_reopened` có `reason = lam_phien`; ngưỡng sau khi sửa: 0 tin gửi trong khung đêm | Thêm khung giờ yên lặng 22:00–7:00: tiền vẫn hoàn ngay, chỉ hoãn tin nhắn tới 7:00; khách tự chọn "nhận ngay" trong cài đặt nếu muốn | Trưởng nhóm CSKH |
+| 19 | Giới hạn hệ thống | `handoff_to_staff` có `reason = qua_han_du_lieu`, đếm theo tuần và theo loại yêu cầu; cảnh báo khi > 2% số yêu cầu để cân nhắc mở quyền tra kho dữ liệu cũ | Kiểm tra ngày đơn ngay bước đầu: đơn quá 12 tháng thì báo rõ giới hạn và chuyển nhân viên kèm tóm tắt luôn, không chạy agent (không tốn token cho việc chắc chắn không làm được) | PM trợ lý hoàn phí |
+| 5 | Ngầm | `audit_sample_checked` hằng tuần: 100 đơn ngẫu nhiên, trong đó lấy riêng ít nhất 30 đơn có mã giảm giá; ngưỡng > 1% đơn lệch tiền | Tool tính hoàn lấy giá sau giảm từ hoá đơn thay vì giá niêm yết; thêm ca kiểm thử "đơn có mã giảm giá" chạy trước mỗi lần cập nhật tool | Kế toán trưởng |
