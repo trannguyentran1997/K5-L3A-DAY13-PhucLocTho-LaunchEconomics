@@ -5,7 +5,7 @@
 - Tên nhóm: PhucLocTho
 - Lớp: L3A
 - Repo nhóm: `K5-L3A-DAY13-PhucLocTho-LaunchEconomics` (xem [SUBMISSION.md](SUBMISSION.md))
-- URL repo: https://github.com/trannguyentran1997/K5-L3A-DAY13-PhucLocTho-LaunchEconomics · Nhánh nộp: `main` · Commit chốt: (ghi mã commit cuối cùng trước deadline)
+- URL repo, nhánh nộp, commit chốt: https://github.com/trannguyentran1997/K5-L3A-DAY13-PhucLocTho-LaunchEconomics · nhánh `main` · commit chốt: (ghi mã commit cuối cùng trước deadline)
 
 ## Thành viên
 
@@ -23,27 +23,21 @@ Bốn vai của lab:
 - **Người gắn nhãn 1:** đọc đề, theo dõi điều kiện "Xong khi"; gắn nhãn 20 ca độc lập ở CP3.
 - **Người gắn nhãn 2, kiêm giữ hồ sơ:** điền `report/team/ho_so_launch_v0.md` từ đầu buổi; gắn nhãn 20 ca độc lập ở CP3.
 
-## Cách nhóm chia việc
+Đổi người viết code sau giờ giải lao, để ít nhất hai người trong nhóm tự tay tính được chi phí.
 
-Nhóm không đổi vai sau giải lao mà chia theo **phần riêng**, mỗi người giữ file riêng và làm trên nhánh riêng; trưởng nhóm gộp vào `main` và review (chi tiết: [PHAN_CONG_NHOM.md](PHAN_CONG_NHOM.md)). Mục đích của bảng 4 vai vẫn giữ: hai người tự tay tính chi phí (Đức bằng code, Trân kiểm lại bằng Excel), hai người gắn nhãn độc lập (Đăng, Trân).
-
-| Thành viên | Phần | Nhiệm vụ | File giữ | Nhánh |
-| --- | --- | --- | --- | --- |
-| Trân | Tổng hợp | Gắn nhãn 2 (C), kiểm số A2, hồ sơ E3, gộp và review, nộp bài | `TEAM.md`, `ho_so_launch_v0.md`, `group_report.md`, `kiem_so_A2.xlsx`, `PHAN_CONG_NHOM.md` | `NguyenTranTuTran-2A202603603` |
-| Đức | Chi phí | A1–A4, B1–B4 | `src/lab13.py` (phần A, B), `bang_chi_phi.md` | `PhamDuyDuc-2A202603611` |
-| Ngọc | Pilot | D1–D3 | `src/lab13.py` (phần D), `pilot_plan.yaml` | `PhamThiHongNgoc-2A202603602` |
-| Đăng | Lỗi và chỉ số | C, E1, E2, phiếu chấm | `bang_loi.md`, `chi_so.md`, `phieu_cham.md` | `ttdang` |
-
-Ký hiệu trạng thái dưới đây: ✅ xong · 🔧 xong, có sửa khi review · ⏳ chưa xong. Bảng đối chiếu từng việc cũng có trong mục 6 của `report/team/group_report.md`.
+Nhóm không đổi vai sau giải lao mà chia việc theo phần riêng, mỗi người làm trên nhánh riêng, trưởng nhóm gộp vào `main` và review (xem [PHAN_CONG_NHOM.md](PHAN_CONG_NHOM.md)). Vẫn có hai người tự tay tính chi phí: Đức bằng code, Trân kiểm lại bằng Excel.
 
 ## Cá nhân
 
-Báo cáo riêng của từng thành viên nằm trong `report/team/`:
+Mỗi thành viên đồng thời tạo một báo cáo riêng trong `report/` theo dạng:
 
-- `report/team/2A202603603_NguyenTranTuTran.md`
-- `report/team/2A202603611_PhamDuyDuc.md`
-- `report/team/2A202603602_PhamThiHongNgoc.md`
-- `report/team/2A202603618_TranTuanDang.md`
+```text
+report/team/MSSV_HoTen.md
+```
+
+Ví dụ: `report/team/20241234_NguyenVanAn.md`.
+
+Báo cáo của nhóm: `report/team/2A202603603_NguyenTranTuTran.md`, `report/team/2A202603611_PhamDuyDuc.md`, `report/team/2A202603602_PhamThiHongNgoc.md`, `report/team/2A202603618_TranTuanDang.md`.
 
 ## NguyenTranTuTran-2A202603603
 
@@ -56,20 +50,20 @@ Báo cáo riêng của từng thành viên nằm trong `report/team/`:
 
 ### Đóng góp cụ thể
 
-- ✅ **Chia việc:** viết `PHAN_CONG_NHOM.md` — 4 phần riêng để không ai phải chờ ai, ba điểm chạm bắt buộc, cách gắn nhãn 20 ca, checklist soát và nộp bài.
-- ✅ **Repo:** tạo repo nhóm theo đúng tên, mời 3 thành viên làm collaborator (cả 3 đã push được nhánh).
-- ✅ **Gộp nhánh:** gộp 3 nhánh vào `main`, giải xung đột duy nhất ở cuối `src/lab13.py` (giữ lời gọi phần D), sửa xung đột file phân công; chạy lại toàn bộ `lab13.py` trên máy khác với máy viết code, số khớp đáp án.
-- ✅ **Review và sửa:**
+- Chia việc: viết `PHAN_CONG_NHOM.md` gồm 4 phần riêng để không ai phải chờ ai, ba điểm chạm bắt buộc, cách gắn nhãn 20 ca, checklist soát và nộp bài.
+- Repo: tạo repo nhóm đúng tên, mời 3 thành viên làm collaborator.
+- Gộp nhánh: gộp 3 nhánh vào `main`, giải xung đột ở cuối `src/lab13.py` (giữ lời gọi phần D); chạy lại toàn bộ `lab13.py` trên máy khác với máy viết code, số khớp đáp án.
+- Review và sửa:
   - `pilot_plan.yaml`: đổi 12.414 đ thành 12.415 đ cho khớp code; tách hoàn tiền trùng thành luật dừng thứ 4 (1 ca trong 24 giờ là dừng); ghi ngày bắt đầu 2026-12-01.
   - `bang_loi.md`: viết lại bảng khắc phục bằng ca 14, 20, 16, 19, 5 vì bản đầu trùng gần nguyên văn bài mẫu; bỏ mục "quy tắc bổ sung"; gỡ cột nhãn người 2 được điền khi chưa có nhãn thật.
   - `chi_so.md`: thêm event `customer_notification_sent` và các thuộc tính `closed_by`, `co_ma_giam_gia`, `qua_han_du_lieu` cho 5 ca mới.
-  - Báo cáo của Đăng: sửa các câu "đồng thuận 18/20" chưa đúng sự thật lúc đó, thêm ghi chú review.
-- ✅ **Kiểm số A2 bằng Excel:** `report/team/kiem_so_A2.xlsx` tính lại token, tool, lần chạy 2–3, xem lại, làm lại, số việc thành công, chi phí mỗi việc thành công bằng công thức Excel trên hai file CSV, không dùng `lab13.py`; khớp 11/11 khoản, lệch lớn nhất 0,11% (do làm tròn 16,3).
-- ✅ **Gắn nhãn 20 ca (người gắn nhãn 2):** gắn theo nguyên nhân gốc, ghi cả mã phân vân trên phiếu; so với Đăng trùng 20/20 = 100%, không có ca lệch.
-- ✅ **Hồ sơ launch v0:** 7 mục, mỗi mục có con số chính, trạng thái, một vai trò phụ trách; đề xuất **Go có điều kiện** cho pilot `noi_dia` + `hang_nang` với 4 điều kiện có người phụ trách và ngày kiểm tra; nêu 2 con số bất lợi (xem lại 100% là 0,98–1,03×; power 0,64 ở mức +5 điểm).
-- ✅ **`TEAM.md`, `group_report.md`** (có bảng đối chiếu phân công), báo cáo cá nhân.
-- ✅ **Soát cuối:** không có từ bị cấm, mọi số giả lập có nhãn `simulated`, `pilot_plan.yaml` đọc được và không còn `?`.
-- ⏳ Gửi hồ sơ cho hội đồng và trình bày 1 phút ở Gate 2a; điền commit chốt; push cuối.
+  - Báo cáo của Đăng: sửa các câu "đồng thuận 18/20" chưa đúng lúc đó, thêm ghi chú review.
+- Kiểm số A2 bằng Excel: `report/team/kiem_so_A2.xlsx` tính lại token, tool, lần chạy 2–3, xem lại, làm lại, số việc thành công và chi phí mỗi việc thành công bằng công thức Excel trên hai file CSV, không dùng `lab13.py`; khớp 11/11 khoản, lệch lớn nhất 0,11% (do làm tròn 16,3).
+- Gắn nhãn 20 ca (người gắn nhãn 2) theo nguyên nhân gốc, ghi cả mã phân vân; so với Đăng trùng 20/20 = 100%, không có ca lệch.
+- Hồ sơ launch v0: 7 mục, mỗi mục có con số chính, trạng thái, một vai trò phụ trách; đề xuất Go có điều kiện cho pilot `noi_dia` + `hang_nang` với 4 điều kiện có người phụ trách và ngày kiểm tra; nêu 2 con số bất lợi (xem lại 100% là 0,98–1,03×; power 0,64 ở mức +5 điểm).
+- `TEAM.md`, `group_report.md` (có bảng đối chiếu phân công), báo cáo cá nhân.
+- Soát cuối: không có từ bị cấm, mọi số giả lập có nhãn `simulated`, `pilot_plan.yaml` đọc được và không còn dấu `?`.
+- Chưa xong: gửi hồ sơ và trình bày 1 phút ở Gate 2a; điền commit chốt; push cuối.
 
 ### Bằng chứng
 
@@ -79,8 +73,9 @@ Báo cáo riêng của từng thành viên nằm trong `report/team/`:
 - `a8e1bde`, `b303cd3`: review và sửa phần của Ngọc, Đăng.
 - `96dd876`: hồ sơ launch v0, `TEAM.md`, `group_report.md`, báo cáo cá nhân.
 - `1247fcb`: bảng đối chiếu phân công trong `group_report.md`.
-- `d5fb4a5`: `kiem_so_A2.xlsx`.
+- `d5fb4a5`: `report/team/kiem_so_A2.xlsx`.
 - `fb47147`: bộ nhãn 20 ca của người gắn nhãn 2, tỉ lệ đồng thuận, hồ sơ mục 5.
+- `64dd0ed`: bổ sung đóng góp từng người trong `TEAM.md`.
 
 ## PhamDuyDuc-2A202603611
 
@@ -91,14 +86,14 @@ Báo cáo riêng của từng thành viên nằm trong `report/team/`:
 
 ### Đóng góp cụ thể
 
-- ✅ **A1:** 3 hàm `so_lan_chay_ky_vong`, `ti_le_thanh_cong`, `he_so_chi_phi_moi_viec_thanh_cong`, qua cả 3 phép thử (1,20 · 1,25 · 1,25).
-- ✅ **A2:** `mo_hinh` tính tử số trên mọi lần chạy kể cả lần lỗi, mẫu số chỉ đếm 978 việc thành công: tổng 4.373.585 đ, **4.472 đ mỗi việc thành công**, gấp 16,3 lần hoá đơn chia số yêu cầu; làm lại 51,8%, xem lại 40,7%; cả hệ thống 5.865 đ = 0,49× [simulated].
-- ✅ **A3:** tách 4 loại (`noi_dia` 0,22×, `hang_nang` 0,69×, `doi_tac` 0,85×, `quoc_te` 1,88× [simulated]) và tỉ lệ ok theo từng lần thử, chỉ ra chạy lại không giúp `quoc_te` (30,0% → 11,4% → 2,2%).
-- 🔧 **A4:** cộng chi phí cố định 40 triệu/tháng: 4.599 đ = 0,38× ở 45.000 yêu cầu/tháng, 5.784 đ = 0,48× nếu còn một nửa [simulated]. Bản đầu chia nhầm 982 thay vì 1.200, Đức tự phát hiện và sửa.
-- ✅ **B1–B4:** 9 kịch bản độ nhạy; cặp token × 2 + xem lại × 2 = 6.543 đ (+46,3%) và xếp hạng 3 yếu tố (làm lại · xem lại · lương); giới hạn 2 lần chạy rẻ nhất cho cả hệ thống (6.901.220 đ); xem lại 100% là 11.743 đ = 0,98× và 12.415 đ = 1,03×, hoà vốn ≤ 5,1 và ≤ 4,8 phút [simulated].
-- ✅ **`bang_chi_phi.md`** điền đủ, mọi số từ cột `_simulated` có nhãn.
-- 🔧 **Push theo 2 mốc (~14:50, ~15:20), sau mốc 2 không sửa `lab13.py`:** thực tế push một lần lúc 15:38, rồi sửa tiếp `lab13.py` lúc 15:49 (lỗi mã hoá tiếng Việt, A4) sau khi Ngọc đã ghép phần D, gây một xung đột khi gộp; trưởng nhóm đã giải.
-- ✅ **Báo cáo cá nhân.**
+- A1: 3 hàm `so_lan_chay_ky_vong`, `ti_le_thanh_cong`, `he_so_chi_phi_moi_viec_thanh_cong`, qua cả 3 phép thử (1,20 · 1,25 · 1,25).
+- A2: `mo_hinh` tính tử số trên mọi lần chạy kể cả lần lỗi, mẫu số chỉ đếm 978 việc thành công: tổng 4.373.585 đ, 4.472 đ mỗi việc thành công, gấp 16,3 lần hoá đơn chia số yêu cầu; làm lại 51,8%, xem lại 40,7%; cả hệ thống 5.865 đ = 0,49× [simulated].
+- A3: tách 4 loại (`noi_dia` 0,22×, `hang_nang` 0,69×, `doi_tac` 0,85×, `quoc_te` 1,88× [simulated]) và tỉ lệ ok theo từng lần thử, chỉ ra chạy lại không giúp `quoc_te` (30,0% → 11,4% → 2,2%).
+- A4: cộng chi phí cố định 40 triệu/tháng: 4.599 đ = 0,38× ở 45.000 yêu cầu/tháng, 5.784 đ = 0,48× nếu còn một nửa [simulated]. Bản đầu chia nhầm 982 thay vì 1.200, Đức tự phát hiện và sửa.
+- B1–B4: 9 kịch bản độ nhạy; cặp token × 2 + xem lại × 2 = 6.543 đ (+46,3%) và xếp hạng 3 yếu tố (làm lại · xem lại · lương); giới hạn 2 lần chạy rẻ nhất cho cả hệ thống (6.901.220 đ); xem lại 100% là 11.743 đ = 0,98× và 12.415 đ = 1,03×, hoà vốn ≤ 5,1 và ≤ 4,8 phút [simulated].
+- Điền đủ `bang_chi_phi.md`, mọi số từ cột `_simulated` có nhãn.
+- Báo cáo cá nhân.
+- Ghi chú quy trình: không tách 2 mốc push như phân công mà push một lần lúc 15:38; sửa tiếp `lab13.py` lúc 15:49 (lỗi mã hoá tiếng Việt, A4) sau khi Ngọc đã ghép phần D, gây một xung đột khi gộp, trưởng nhóm đã giải.
 
 ### Bằng chứng
 
@@ -111,17 +106,17 @@ Báo cáo riêng của từng thành viên nằm trong `report/team/`:
 ### Phần việc phụ trách
 
 - Nhiệm vụ D: code D1 (ghép vào `src/lab13.py`) và `report/team/pilot_plan.yaml`.
-- Kiểm số A2 bằng Excel (đã chuyển cho Trân, xem bên dưới).
+- Kiểm số A2 bằng Excel (đã chuyển cho Trân).
 
 ### Đóng góp cụ thể
 
-- ✅ **Code D1** (viết trong file nháp riêng rồi ghép): 5 câu a–e — chia theo yêu cầu 1.251/nhóm (đối chiếu `statsmodels` 1.250); theo nhân viên m = 75: DE 2,48, 3.103/nhóm, cần 84 > 40 người; 20 nhân viên/nhóm: trần 1.000 < 1.251; 6 depot/nhóm: trần 300; MDE +6 điểm: m ≥ 299, DE 6,96.
-- ✅ **Con số bất lợi:** power chỉ 0,64 nếu tác động thật là +5 điểm với n = 859/nhóm; ước tính ~9,7 ngày ở bước 0.50.
-- ✅ **Tỉ lệ mở lại hiện tại** trước khi đặt ngưỡng an toàn: 4,25% toàn mẫu, 3,97% trong phạm vi pilot.
-- 🔧 **`pilot_plan.yaml`:** đủ mọi trường, D1, D2 và đánh đổi trong chú thích, chia theo nhân viên 20 + 20 phân tầng theo depot, `scope` lấy số A3, luật dừng đủ 4 vế, qua 2 lệnh tự kiểm. Khi review: đổi 12.414 thành 12.415, thêm luật dừng hoàn trùng thứ 4.
-- ✅ **Ghép phần D vào `src/lab13.py`**, chạy hết không lỗi, xoá `src/nhap_pilot.py`.
-- 🔧 **Kiểm số A2 bằng Excel:** việc được thêm vào phân công sau khi Ngọc đã làm xong phần D; Trân làm thay khi review (`kiem_so_A2.xlsx`).
-- ✅ **Báo cáo cá nhân.**
+- Code D1 viết trong file nháp riêng rồi ghép: chia theo yêu cầu 1.251/nhóm (đối chiếu `statsmodels` 1.250); theo nhân viên m = 75: DE 2,48, 3.103/nhóm, cần 84 > 40 người; 20 nhân viên/nhóm: trần 1.000 < 1.251; 6 depot/nhóm: trần 300; MDE +6 điểm: m ≥ 299, DE 6,96.
+- Con số bất lợi: power chỉ 0,64 nếu tác động thật là +5 điểm với n = 859/nhóm; ước tính khoảng 9,7 ngày ở bước 0.50.
+- Tỉ lệ mở lại hiện tại trước khi đặt ngưỡng an toàn: 4,25% toàn mẫu, 3,97% trong phạm vi pilot.
+- `pilot_plan.yaml`: đủ mọi trường; D1, D2 và đánh đổi trong chú thích; chia theo nhân viên 20 + 20 phân tầng theo depot; `scope` lấy số A3; luật dừng đủ 4 vế; qua 2 lệnh tự kiểm. Khi review: đổi 12.414 thành 12.415, thêm luật dừng hoàn trùng thứ 4.
+- Ghép phần D vào `src/lab13.py`, chạy hết không lỗi, xoá `src/nhap_pilot.py`.
+- Báo cáo cá nhân.
+- Kiểm số A2 bằng Excel: việc thêm vào phân công sau khi Ngọc đã làm xong phần D; Trân làm thay khi review.
 - Ghi chú quy trình: 2 commit đầu (`73aa3d3`, `40ec4ab`) push thẳng lên `main` thay vì nhánh riêng; không ảnh hưởng nội dung.
 
 ### Bằng chứng
@@ -138,21 +133,15 @@ Báo cáo riêng của từng thành viên nằm trong `report/team/`:
 
 ### Đóng góp cụ thể
 
-- ✅ **Gắn nhãn 20 ca (người gắn nhãn 1)** theo 5 loại Google PAIR; bộ nhãn này là cột "Nhãn người 1" trong `bang_loi.md`, trùng 20/20 với người gắn nhãn 2.
-- 🔧 **`bang_loi.md`:** dựng bảng hai bộ nhãn và bảng khắc phục 5 ca. Khi review, bảng khắc phục được viết lại (bản đầu trùng bài mẫu) và cột người 2 được gỡ rồi nhập lại bằng nhãn thật của Trân.
-- ✅ **E1:** tính 3 chỉ số bằng pandas, ghi code vào file — chính 82,83% (994/1.200), bỏ qua gợi ý 27,12% (48/177), mở lại 7 ngày 4,25% (51/1.200; 3,97% trong phạm vi); đề xuất thêm 1 chỉ số dùng, 1 chỉ số an toàn.
-- 🔧 **Danh sách event:** 11 event có `trace_id` và kiểm tra chéo chỉ số nào tính từ event nào (review thêm 1 event cho bảng khắc phục mới, thành 12).
-- ✅ **E2:** 4 dòng rủi ro kinh tế lấy số từ bảng độ nhạy (làm lại gấp đôi, xem lại 100%, khối lượng thấp, lương tăng) [simulated].
-- 🔧 **Báo cáo cá nhân** (review sửa các câu về đồng thuận).
-- ⏳ **`phieu_cham.md`:** chấm nhóm n + 1 tại buổi Gate 2a.
+- Gắn nhãn 20 ca (người gắn nhãn 1) theo 5 loại Google PAIR; bộ nhãn này là cột "Nhãn người 1" trong `bang_loi.md`, trùng 20/20 với người gắn nhãn 2.
+- `bang_loi.md`: dựng bảng hai bộ nhãn và bảng khắc phục 5 ca. Khi review, bảng khắc phục được viết lại (bản đầu trùng bài mẫu) và cột người 2 được gỡ rồi nhập lại bằng nhãn thật của Trân.
+- E1: tính 3 chỉ số bằng pandas, ghi code vào file: chính 82,83% (994/1.200), bỏ qua gợi ý 27,12% (48/177), mở lại 7 ngày 4,25% (51/1.200; 3,97% trong phạm vi); đề xuất thêm 1 chỉ số dùng, 1 chỉ số an toàn.
+- Danh sách 11 event có `trace_id` và kiểm tra chéo chỉ số nào tính từ event nào (review thêm 1 event cho bảng khắc phục mới, thành 12).
+- E2: 4 dòng rủi ro kinh tế lấy số từ bảng độ nhạy (làm lại gấp đôi, xem lại 100%, khối lượng thấp, lương tăng) [simulated].
+- Báo cáo cá nhân (review sửa các câu về đồng thuận).
+- Chưa xong: `phieu_cham.md`, chấm nhóm n + 1 tại buổi Gate 2a.
 
 ### Bằng chứng
 
 - Nhánh `ttdang`.
 - `25ed0ac`: `bang_loi.md`, `chi_so.md`; `5389a32`: báo cáo cá nhân.
-
-## Việc chung của cả nhóm
-
-- ⏳ 10 phút đọc phần của nhau trước Gate 2a: ai cũng giải thích được tử số và mẫu số của chi phí, cỡ mẫu hiệu dụng khi chia theo cụm, và lý do của đề xuất.
-- ⏳ Duyệt chéo Gate 2a (17:00): Trân trình bày, Đăng giữ phiếu chấm, Đức và Ngọc đối chiếu số của nhóm được chấm.
-- ⏳ Mỗi người tự nộp link repo nhóm trên LMS trước 23h59 GMT+7.
